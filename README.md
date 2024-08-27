@@ -10,11 +10,10 @@
 
 Ultralytics Notebooks provides ready-to-use cookbooks that streamline the testing and execution of computer vision projects, making it easy to set up and run models quickly.
 
-| Title                      | Google Colab | Documentation | YouTube Video |
-|----------------------------|--------------|---------------|---------------|
-| Ultralytics YOLOv8 Predict | ---          | ---           | ---           |
-| SAM2 Inference             | ---          | ---           | ---           |
-| Fast SAM Inference         | ---          | ---           | ---           |
+| Title and Documentation                                                                       | Google Colab                                                                                                                                                                                             | YouTube Video                                                                                                                                                                                                   |
+|-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <a href="https://docs.ultralytics.com/modes/">YOLOv8 Train, Val, Predict and Export Modes</a> | <a href="https://colab.research.google.com/github/ultralytics/notebooks/blob/main/notebooks/tutorial.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a> | <a href="https://youtu.be/j8uQc0qB91s"><center><img width=30% src="https://raw.githubusercontent.com/ultralytics/assets/main/social/logo-social-youtube-rect.png" alt="Ultralytics Youtube Video"></center></a> |
+| SAM2 Inference                                                                                | ---                                                                                                                                                                                                      | ---                                                                                                                                                                                                             |
 
 ## 💡 Contribute
 
