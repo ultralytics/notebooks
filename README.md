@@ -23,7 +23,7 @@
 </div>
 </div>
 
-## Ultralytics Notebooks
+## 📚 Ultralytics Notebooks
 
 Ultralytics Notebooks offers ready-to-use resources that streamline the testing and execution of computer vision projects, making it easy to set up and run models quickly.
 
