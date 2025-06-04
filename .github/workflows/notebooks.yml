@@ -17,7 +17,7 @@ on:
 
 jobs:
   Notebooks:
-    name: Execute Notebooks
+    name: Ultralytics Notebooks
     runs-on: ubuntu-latest
 
     steps:
@@ -31,7 +31,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install jupyter nbconvert ipykernel
 
-      - name: Test Ultralytics YOLO Notebooks
+      - name: Test Ultralytics YOLO
         run: |
           set -e
           jupyter nbconvert --to notebook --inplace --execute notebooks/how-to-train-ultralytics-yolo-on-medical-pills-dataset.ipynb
