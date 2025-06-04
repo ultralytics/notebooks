@@ -1,0 +1,37 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
+# Notebooks GitHub Actions tests
+
+name: Run Notebooks
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 8 * * *" # runs at 08:00 UTC every day
+
+jobs:
+  Notebooks:
+    name: Execute Notebooks
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install jupyter nbconvert ipykernel
+
+      - name: Test Ultralytics YOLO Notebooks
+        run: |
+          set -e
+          jupyter nbconvert --to notebook --inplace --execute notebooks/how-to-train-ultralytics-yolo-on-medical-pills-dataset.ipynb
