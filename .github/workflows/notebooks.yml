@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          path: .  # checkout to rootdir
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -33,7 +35,6 @@ jobs:
       - name: Run notebook tests
         run: |
           echo "CI event: ${{ github.event_name }}"
-          cd $GITHUB_WORKSPACE  # now we're in /home/runner/work/notebooks/notebooks
           if [ "${{ github.event_name }}" = "schedule" ]; then
             echo "Running full test suite including @slow tests"
             pytest tests/test_notebooks.py
