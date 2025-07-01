@@ -5,8 +5,9 @@
 import pytest
 from ultralytics import YOLO, SAM, ASSETS
 
-# Test: notebooks/how-to-export-the-validation-results-into-dataframe-csv-sql-and-other-formats.ipynb
+
 def test_export_val_results():
+    """Test: notebooks/how-to-export-the-validation-results-into-dataframe-csv-sql-and-other-formats.ipynb"""
     model = YOLO("yolo11n.pt")
     metrics = model.val(data="coco8.yaml", verbose=True)
     metrics.to_df()
@@ -25,9 +26,10 @@ def test_export_val_results():
         f.write(metrics.confusion_matrix.to_csv())
 
 
-# Test: notebooks/inference-with-meta-sam-and-sam2-using-ultralytics-python-package.ipynb
+
 @pytest.mark.slow
 def test_sam_inference():
+    """Test: notebooks/inference-with-meta-sam-and-sam2-using-ultralytics-python-package.ipynb"""
     from ultralytics.data.annotator import auto_annotate
     from ultralytics.utils.downloads import safe_download
 
@@ -44,6 +46,3 @@ def test_sam_inference():
     auto_annotate(data="/content/assets",  # return the annotation in the Ultralytics YOLO segmentation format.
                   det_model="yolo11x.pt",
                   sam_model="sam_b.pt")
-
-
-# Test:
