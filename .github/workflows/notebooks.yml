@@ -23,7 +23,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Install dependencies
         run: |
@@ -31,6 +31,7 @@ jobs:
           pip install ultralytics pytest
 
       - name: Run notebook tests
+        working-directory: ${{ github.workspace }}
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then
             echo "Running full test suite including @slow tests"
