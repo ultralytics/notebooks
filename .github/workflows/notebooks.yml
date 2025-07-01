@@ -30,7 +30,6 @@ jobs:
           pip install ultralytics pytest transformers==4.49.0
 
       - name: Run notebook tests
-        working-directory: ../  # rootdir
         run: |
           echo "CI event: ${{ github.event_name }}"
           if [ "${{ github.event_name }}" = "schedule" ]; then
