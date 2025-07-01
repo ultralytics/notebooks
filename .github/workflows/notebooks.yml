@@ -38,8 +38,8 @@ jobs:
           echo "CI event: ${{ github.event_name }}"
           if [ "${{ github.event_name }}" = "schedule" ]; then
             echo "Running full test suite including @slow tests"
-            pytest tests/test_notebooks.py
+            pytest tests/test_notebooks.py -p no:warnings
           else
             echo "Running fast tests only (excluding @slow)"
-            pytest -m "not slow" tests/test_notebooks.py
+            pytest -m "not slow" tests/test_notebooks.py -p no:warnings
           fi
