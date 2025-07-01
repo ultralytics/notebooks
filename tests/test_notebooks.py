@@ -1,3 +1,7 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
+# Tests Ultralytics Notebooks: https://github.com/ultralytics/notebooks/
+
 import pytest
 from ultralytics import YOLO, SAM, ASSETS
 

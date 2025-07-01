@@ -1,3 +1,7 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
+# Notebooks (CI) GitHub Actions tests
+
 name: Run Notebooks
 
 permissions:
