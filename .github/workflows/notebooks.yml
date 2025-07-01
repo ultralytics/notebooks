@@ -25,14 +25,15 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install dependencies
+      - name: Install dependencies  # Transformer dependency for Florence-2
         run: |
           python -m pip install --upgrade pip
-          pip install ultralytics pytest
+          pip install ultralytics pytest transformers==4.49.0
 
       - name: Run notebook tests
-        working-directory: ${{ github.workspace }}
         run: |
+          echo "CI event: ${{ github.event_name }}"
+          cd $GITHUB_WORKSPACE  # now we're in /home/runner/work/notebooks/notebooks
           if [ "${{ github.event_name }}" = "schedule" ]; then
             echo "Running full test suite including @slow tests"
             pytest tests/test_notebooks.py
