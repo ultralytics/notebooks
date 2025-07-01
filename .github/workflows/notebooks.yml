@@ -19,9 +19,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          path: .  # checkout to rootdir
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -33,6 +30,7 @@ jobs:
           pip install ultralytics pytest transformers==4.49.0
 
       - name: Run notebook tests
+        working-directory: ../  # rootdir
         run: |
           echo "CI event: ${{ github.event_name }}"
           if [ "${{ github.event_name }}" = "schedule" ]; then
