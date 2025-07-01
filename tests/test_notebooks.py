@@ -6,7 +6,7 @@ import pytest
 from ultralytics import YOLO, SAM, ASSETS
 
 # Test: notebooks/how-to-export-the-validation-results-into-dataframe-csv-sql-and-other-formats.ipynb
-def export_val_results():
+def test_export_val_results():
     model = YOLO("yolo11n.pt")
     metrics = model.val(data="coco8.yaml", verbose=True)
     metrics.to_df()
