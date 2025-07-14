@@ -8,7 +8,7 @@ TABLE_START = "<!-- NOTEBOOK_TABLE_START -->"
 TABLE_END = "<!-- NOTEBOOK_TABLE_END -->"
 
 
-def generate_table(meta_file="notebooks_metadata.yaml"):
+def generate_table(meta_file="docs/notebooks_metadata.yaml"):
     with open(meta_file) as f:
         entries = yaml.safe_load(f)
 
@@ -56,7 +56,7 @@ def generate_table(meta_file="notebooks_metadata.yaml"):
     return "".join(table)
 
 
-def update_readme(readme_path="README.md", meta_path="notebooks_metadata.yaml"):
+def update_readme(readme_path="README.md", meta_path="docs/notebooks_metadata.yaml"):
     with open(readme_path) as f:
         content = f.read()
 
