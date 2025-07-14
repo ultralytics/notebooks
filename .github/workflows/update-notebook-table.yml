@@ -11,10 +11,6 @@ on:
 
 jobs:
   update-table:
-    if: >
-      github.event.pull_request.merged == true &&
-      (github.event.pull_request.merged_by.login == 'RizwanMunawar' ||
-       github.event.pull_request.merged_by.login == 'glenn-jocher')
     runs-on: ubuntu-latest
 
     permissions:
