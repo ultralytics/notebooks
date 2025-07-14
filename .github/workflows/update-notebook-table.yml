@@ -8,7 +8,6 @@ on:
       - 'README.md'
       - 'notebooks/**'
       - 'docs/notebooks_metadata.yaml'
-      - 'scripts/**'
 
   pull_request:
     branches:
@@ -17,7 +16,6 @@ on:
       - 'README.md'
       - 'notebooks/**'
       - 'docs/notebooks_metadata.yaml'
-      - 'scripts/**'
 
 jobs:
   update-table:
@@ -39,7 +37,7 @@ jobs:
         run: pip install pyyaml
 
       - name: Run notebook table updater
-        run: python scripts/update_notebook_table.py
+        run: python docs/update_notebook_table.py
 
       - name: Commit and push if README.md changed
         if: github.event_name == 'push'  # ✅ only commit on direct pushes (not PR runs)
