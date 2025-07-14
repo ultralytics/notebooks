@@ -1,13 +1,50 @@
-name: Run on Every Pull Request
+name: Auto Update Notebook Table (Branch-only)
 
 on:
-  pull_request:  # ✅ Trigger on any PR to any branch
+  push:
+    branches:
+      - RizwanMunawar-patch-1  # ✅ update table here only
+    paths:
+      - 'docs/notebooks_metadata.yaml'
+      - 'notebooks/**'
+      - 'README.md'
+
+  pull_request:
     types: [opened, synchronize, reopened]
+    paths:
+      - 'docs/notebooks_metadata.yaml'
+      - 'notebooks/**'
+      - 'README.md'
 
 jobs:
-  say-hello:
+  update-table:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
-      - name: Say Hello
-        run: echo "👋 Hello from your GitHub Action! This ran on a PR!"
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Run notebook table updater
+        run: python docs/update_notebook_table.py
+
+      - name: Commit and push table update
+        if: github.event_name == 'push'  # ✅ Only push back on push, NOT on PR
+        run: |
+          git config user.name github-actions
+          git config user.email actions@github.com
+          git add README.md
+          git diff --cached --quiet || git commit -m "🔄 Auto-update notebook table"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
