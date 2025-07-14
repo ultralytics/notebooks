@@ -1,0 +1,11 @@
+- title: "Car Parts Segmentation using Ultralytics YOLO"
+  doc: "https://docs.ultralytics.com/datasets/segment/carparts-seg/"
+  colab: "notebooks/how-to-train-ultralytics-yolo-on-carparts-segmentation-dataset.ipynb"
+  youtube: "HATMPgLYAPU"
+  discussion: "https://github.com/orgs/ultralytics/discussions/12751"
+
+- title: "Object Counting using Ultralytics YOLO"
+  doc: "https://docs.ultralytics.com/guides/object-counting/"
+  colab: "notebooks/how-to-count-the-objects-using-ultralytics-yolo.ipynb"
+  youtube: "vKcD44GkSF8"
+  discussion: "https://github.com/orgs/ultralytics/discussions/8112"
