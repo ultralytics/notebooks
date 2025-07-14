@@ -1,26 +1,36 @@
-name: Test Notebook Table Update
+name: Update Notebook Table (Branch-local Only)
 
 on:
   push:
     branches:
-      - RizwanMunawar-patch-1
+      - RizwanMunawar-patch-1  # ✅ only your working branch
     paths:
       - 'README.md'
       - 'notebooks/**'
       - 'docs/notebooks_metadata.yaml'
+      - 'scripts/**'
+
+  pull_request:
+    branches:
+      - RizwanMunawar-patch-1  # ✅ only if PR is from AND to your branch
+    paths:
+      - 'README.md'
+      - 'notebooks/**'
+      - 'docs/notebooks_metadata.yaml'
+      - 'scripts/**'
 
 jobs:
   update-table:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write
+      contents: write  # ✅ needed for commit
 
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: 3.10
@@ -28,10 +38,11 @@ jobs:
       - name: Install PyYAML
         run: pip install pyyaml
 
-      - name: Update README table
-        run: python docs/update_notebook_table.py
+      - name: Run notebook table updater
+        run: python scripts/update_notebook_table.py
 
       - name: Commit and push if README.md changed
+        if: github.event_name == 'push'  # ✅ only commit on direct pushes (not PR runs)
         run: |
           git config user.name github-actions
           git config user.email actions@github.com
