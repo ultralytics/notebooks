@@ -1,4 +1,4 @@
-name: Auto Update Notebook Table on PR Merge
+name: Test Notebook Table on Push
 
 on:
   push:
@@ -29,7 +29,7 @@ jobs:
         run: pip install pyyaml
 
       - name: Update README table
-        run: python scripts/update_notebook_table.py
+        run: python docs/update_notebook_table.py
 
       - name: Commit and push if README.md changed
         run: |
