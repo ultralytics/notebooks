@@ -39,7 +39,7 @@ jobs:
         run: python docs/update_notebook_table.py
 
       - name: Commit and push table update
-        if: github.event_name == 'push'  # ✅ Only push back on push, NOT on PR
+        if: github.ref == 'refs/heads/RizwanMunawar-patch-1'  # ✅ Only push back on push, NOT on PR
         run: |
           git config user.name github-actions
           git config user.email actions@github.com
