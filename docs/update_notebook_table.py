@@ -8,7 +8,7 @@ TABLE_START = "<!-- NOTEBOOK_TABLE_START -->"
 TABLE_END = "<!-- NOTEBOOK_TABLE_END -->"
 
 
-def generate_table(meta_file="metadata/notebooks_meta.yaml"):
+def generate_table(meta_file="notebooks_meta.yaml"):
     with open(meta_file) as f:
         entries = yaml.safe_load(f)
 
