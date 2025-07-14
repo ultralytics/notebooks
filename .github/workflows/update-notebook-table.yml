@@ -1,13 +1,13 @@
-name: Test Notebook Table on Push
+name: Test Notebook Table Update
 
 on:
   push:
     branches:
       - RizwanMunawar-patch-1
     paths:
-      - 'docs/**'
-      - 'notebooks/**'
       - 'README.md'
+      - 'notebooks/**'
+      - 'docs/notebooks_metadata.yaml'
 
 jobs:
   update-table:
