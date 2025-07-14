@@ -39,12 +39,12 @@ jobs:
         run: python docs/update_notebook_table.py
 
       - name: Commit and push table update
-        if: github.ref == 'refs/heads/RizwanMunawar-patch-1'  # ✅ Only push back on push, NOT on PR
+        if: github.ref == 'refs/heads/RizwanMunawar-patch-1' || github.head_ref == 'RizwanMunawar-patch-1'
         run: |
-          git config user.name github-actions
-          git config user.email actions@github.com
-          git add README.md
-          git diff --cached --quiet || git commit -m "🔄 Auto-update notebook table"
-          git push
+            git config user.name github-actions
+            git config user.email actions@github.com
+            git add README.md
+            git diff --cached --quiet || git commit -m "🔄 Auto-update notebook table"
+            git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
