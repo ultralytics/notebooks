@@ -1,8 +1,9 @@
 name: Auto Update Notebook Table on PR Merge
 
 on:
-  pull_request:
-    types: [closed]
+  push:
+    branches:
+      - RizwanMunawar-patch-1
     paths:
       - 'docs/**'
       - 'notebooks/**'
