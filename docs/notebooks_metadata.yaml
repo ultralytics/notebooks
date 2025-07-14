@@ -1,3 +1,5 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
 - title: "Detect, Segment, Classify, Pose using Ultralytics YOLO"
   doc: "https://docs.ultralytics.com/tasks/"
   colab: "examples/tutorial.ipynb"
