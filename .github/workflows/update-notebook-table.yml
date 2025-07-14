@@ -1,0 +1,45 @@
+name: Auto Update Notebook Table on PR Merge
+
+on:
+  pull_request:
+    types: [closed]
+    paths:
+      - 'docs/**'
+      - 'notebooks/**'
+      - 'README.md'
+
+jobs:
+  update-table:
+    if: >
+      github.event.pull_request.merged == true &&
+      (github.event.pull_request.merged_by.login == 'RizwanMunawar' ||
+       github.event.pull_request.merged_by.login == 'glenn-jocher')
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Update README table
+        run: python scripts/update_notebook_table.py
+
+      - name: Commit and push if README.md changed
+        run: |
+          git config user.name github-actions
+          git config user.email actions@github.com
+          git add README.md
+          git diff --cached --quiet || git commit -m "🔄 Auto-update notebook table"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
