@@ -1,53 +1,13 @@
-name: Update Notebook Table
+name: Run on Every Pull Request
 
 on:
-  push:
-    branches:
-      - RizwanMunawar-patch-1
-    paths:
-      - 'README.md'
-      - 'notebooks/**'
-      - 'docs/notebooks_metadata.yaml'
-
-  pull_request:
-    branches:
-      - RizwanMunawar-patch-1
-    paths:
-      - 'README.md'
-      - 'notebooks/**'
-      - 'docs/notebooks_metadata.yaml'
-
-  workflow_dispatch:  # ✅ manual trigger from GitHub UI
+  pull_request:  # ✅ Trigger on any PR to any branch
+    types: [opened, synchronize, reopened]
 
 jobs:
-  update-table:
+  say-hello:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.10
-
-      - name: Install PyYAML
-        run: pip install pyyaml
-
-      - name: Run notebook table updater
-        run: python docs/update_notebook_table.py
-
-      - name: Commit and push if README.md changed
-        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
-        run: |
-          git config user.name github-actions
-          git config user.email actions@github.com
-          git add README.md
-          git diff --cached --quiet || git commit -m "🔄 Auto-update notebook table"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Say Hello
+        run: echo "👋 Hello from your GitHub Action! This ran on a PR!"
