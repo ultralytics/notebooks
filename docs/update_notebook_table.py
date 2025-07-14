@@ -56,7 +56,7 @@ def generate_table(meta_file="notebooks_metadata.yaml"):
     return "".join(table)
 
 
-def update_readme(readme_path="README.md", meta_path="metadata/notebooks_meta.yaml"):
+def update_readme(readme_path="README.md", meta_path="notebooks_metadata.yaml"):
     with open(readme_path) as f:
         content = f.read()
 
