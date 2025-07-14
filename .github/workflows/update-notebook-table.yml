@@ -1,9 +1,9 @@
-name: Update Notebook Table (Branch-local Only)
+name: Update Notebook Table
 
 on:
   push:
     branches:
-      - RizwanMunawar-patch-1  # ✅ only your working branch
+      - RizwanMunawar-patch-1
     paths:
       - 'README.md'
       - 'notebooks/**'
@@ -11,18 +11,20 @@ on:
 
   pull_request:
     branches:
-      - RizwanMunawar-patch-1  # ✅ only if PR is from AND to your branch
+      - RizwanMunawar-patch-1
     paths:
       - 'README.md'
       - 'notebooks/**'
       - 'docs/notebooks_metadata.yaml'
+
+  workflow_dispatch:  # ✅ manual trigger from GitHub UI
 
 jobs:
   update-table:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write  # ✅ needed for commit
+      contents: write
 
     steps:
       - name: Checkout code
@@ -40,7 +42,7 @@ jobs:
         run: python docs/update_notebook_table.py
 
       - name: Commit and push if README.md changed
-        if: github.event_name == 'push'  # ✅ only commit on direct pushes (not PR runs)
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: |
           git config user.name github-actions
           git config user.email actions@github.com
