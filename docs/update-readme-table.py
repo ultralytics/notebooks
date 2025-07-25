@@ -24,54 +24,63 @@ table = [
     "|:--------:|:----------------------:|:-------------------:|:-------------------------------:|",
 ]
 
-for nb in data["notebooks"]:
+for notebook in data["notebooks"]:
     # Title link
-    if nb.get("link"):
-        title_link = f'<a href="{nb["link"]}">{nb["title"]}</a>'
+    if notebook.get("link"):
+        title_link = f'<a href="{notebook["link"]}">{notebook["title"]}</a>'
     else:
-        github_url = f"https://github.com/ultralytics/notebooks/blob/main/{nb['file']}"
-        title_link = f"[{nb['title']}]({github_url})"
+        github_url = f"https://github.com/ultralytics/notebooks/blob/main/{notebook['file']}"
+        title_link = f"[{notebook['title']}]({github_url})"
 
     # Generate all badges
-    colab_badge = f"[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ultralytics/notebooks/blob/main/{nb['file']})"
-    kaggle_badge = (
-        f"[![Open in Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)]({nb['kaggle']})"
-        if nb.get("kaggle")
+    colab_url = f"https://colab.research.google.com/github/ultralytics/notebooks/blob/main/{notebook['file']}"
+    colab_badge = f"[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)]({colab_url})"
+    
+    kaggle_url = f"https://kaggle.com/kernels/welcome?src=https://github.com/ultralytics/notebooks/blob/main/{notebook['file']}"
+    kaggle_badge = f"[![Open in Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)]({kaggle_url})"
+    
+    amazon_sagemaker_url = (
+        f"https://studiolab.sagemaker.aws/import/github/ultralytics/notebooks/blob/main/{notebook['file']}"
+    )
+    amazon_sagemaker_badge = (
+        f"[![Open in SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)]({amazon_sagemaker_url})"
+        if notebook.get("file")
         else ""
     )
+    
     youtube_badge = (
-        f"[![Watch on YouTube](https://badges.aleen42.com/src/youtube.svg)]({nb['youtube']})"
-        if nb.get("youtube")
+        f"[![Watch on YouTube](https://badges.aleen42.com/src/youtube.svg)]({notebook['youtube']})"
+        if notebook.get("youtube")
         else ""
     )
     dataset_badge = (
-        f"[![Explore Dataset](https://img.shields.io/badge/Dataset-%23ff1b6c?logo=ultralytics)]({nb['dataset']})"
-        if nb.get("dataset")
+        f"[![Explore Dataset](https://img.shields.io/badge/Dataset-%23ff1b6c?logo=ultralytics)]({notebook['dataset']})"
+        if notebook.get("dataset")
         else ""
     )
     blog_badge = (
-        f"[![Ultralytics Blog](https://github.com/user-attachments/assets/c60c360b-69de-4228-8545-f83096d5a9ce)]({nb['blog']})"
-        if nb.get("blog")
+        f"[![Ultralytics Blog](https://github.com/user-attachments/assets/c60c360b-69de-4228-8545-f83096d5a9ce)]({notebook['blog']})"
+        if notebook.get("blog")
         else ""
     )
     arxiv_badge = (
-        f"[![Read arXiv paper](https://img.shields.io/badge/arXiv-{nb['arxiv'].split('/')[-1]}-b31b1b.svg)]({nb['arxiv']})"
-        if nb.get("arxiv")
+        f"[![Read arXiv paper](https://img.shields.io/badge/arXiv-{notebook['arxiv'].split('/')[-1]}-b31b1b.svg)]({notebook['arxiv']})"
+        if notebook.get("arxiv")
         else ""
     )
-    discussion_badge = (
-        f"[![Read Discussion](https://img.shields.io/badge/Documentation-E1FF25?logo=ultralytics)]({nb['discussion']})"
-        if nb.get("discussion")
+    documentation_badge = (
+        f"[![Read Documentation](https://img.shields.io/badge/Documentation-E1FF25?logo=ultralytics&logoColor=black)]({notebook['documentation']})"
+        if notebook.get("documentation")
         else ""
     )
-    github_badge = f"[![GitHub](https://badges.aleen42.com/src/github.svg)]({nb['github']})" if nb.get("github") else ""
+    github_badge = f"[![GitHub](https://badges.aleen42.com/src/github.svg)]({notebook['github']})" if notebook.get("github") else ""
 
     # Add row with proper centering
     table.append(
         f"| {title_link} | "
         f"{center_badges(colab_badge, kaggle_badge)} | "
         f"{center_badges(youtube_badge, dataset_badge, blog_badge)} | "
-        f"{center_badges(arxiv_badge, discussion_badge, github_badge)} |"
+        f"{center_badges(arxiv_badge, documentation_badge, github_badge)} |"
     )
 
 table_md = "\n".join(table)
