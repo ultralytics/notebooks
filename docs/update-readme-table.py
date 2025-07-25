@@ -42,7 +42,7 @@ for nb in data["notebooks"]:
     # Wrap supporting materials in inline-flex
     supporting_materials = (
         f'<div style="display:inline-flex; gap:4px; align-items:center;">'
-        f'{youtube_badge} {dataset_badge} {blog_badge}'
+        f'{dataset_badge} {youtube_badge} {blog_badge}'
         f'</div>'
     )
 
