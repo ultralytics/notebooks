@@ -28,5 +28,5 @@ jobs:
         git config --global user.name "UltralyticsAssistant"
           git config --global user.email "web@ultralytics.com"
         git add README.md
-        git diff --staged --quiet || git commit -m "Update table"
+        git diff --staged --quiet || git commit -m "Update-table by  by https://ultralytics.com/actions"
         git push
