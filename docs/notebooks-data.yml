@@ -23,6 +23,7 @@ notebooks:
     blog: "https://www.ultralytics.com/blog/image-segmentation-with-ultralytics-yolo11-on-google-colab"
     discussion: "https://github.com/orgs/ultralytics/discussions/12751"
     github: "https://github.com/ultralytics/ultralytics"
+    dataset: "https://docs.ultralytics.com/datasets/segment/carparts-seg/"
 
   - title: "Ultralytics YOLO with SAHI Tiled Inference"
     link: "https://docs.ultralytics.com/guides/sahi-tiled-inference/"
@@ -38,6 +39,7 @@ notebooks:
     blog: "https://www.ultralytics.com/blog/a-deep-dive-into-detecting-pills-using-ultralytics-yolo11"
     kaggle: "https://www.kaggle.com/code/muhammadriz123/medical-pills-detection-using-ultralytics-yolo11"
     discussion: "https://github.com/orgs/ultralytics/discussions/18515"
+    dataset: "https://docs.ultralytics.com/datasets/detect/medical-pills/"
 
   - title: "Brain Tumor Detection using Ultralytics YOLO"
     link: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
@@ -46,6 +48,7 @@ notebooks:
     blog: "https://www.ultralytics.com/blog/using-yolo11-for-tumor-detection-in-medical-imaging"
     kaggle: "https://www.kaggle.com/code/muhammadriz123/medical-pills-detection-using-ultralytics-yolo11"
     discussion: "https://github.com/orgs/ultralytics/discussions/9101"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
 
   - title: "Object Counting using Ultralytics YOLO"
     link: "https://docs.ultralytics.com/guides/object-counting/"
@@ -84,6 +87,7 @@ notebooks:
     file: "notebooks/how-to-train-ultralytics-yolo-on-homeobjects-dataset.ipynb"
     youtube: "https://youtu.be/v3iqOYoRBFQ"
     discussion: "https://github.com/orgs/ultralytics/discussions/20805"
+    dataset: "https://docs.ultralytics.com/datasets/detect/homeobjects-3k/"
 
   - title: "Generate Heatmaps using Ultralytics YOLO"
     link: "https://docs.ultralytics.com/guides/heatmaps/"

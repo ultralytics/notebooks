@@ -57,11 +57,15 @@ for nb in data["notebooks"]:
     if nb.get("github"):
         github_badge = f'<a href="{nb["github"]}"><img src="https://badges.aleen42.com/src/github.svg" alt="GitHub Repo"></a>'
 
+    dataset_badge = ""
+    if nb.get("dataset"):
+        dataset_badge = f'<a href="{nb["dataset"]}"><img src="https://github.com/user-attachments/assets/af3ad2cb-8541-440f-8aed-d93085d1f4e7" alt="Explore dataset"></a>'
+
     table.append(
         f"| {title_link} | "
         f'<div align="center">{colab_badge} {kaggle_badge}</div> | '
-        f'<div align="center">{youtube_badge} {blog_badge}</div> | '
-        f'<div align="center">{arxiv_badge} {github_badge} {discussion_badge}</div> |'
+        f'<div align="center">{youtube_badge} {dataset_badge} {blog_badge}</div> | '
+        f'<div align="center">{arxiv_badge} {discussion_badge} {github_badge}</div> |'
     )
 
 table_md = "\n".join(table)
