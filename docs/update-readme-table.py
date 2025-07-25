@@ -9,10 +9,10 @@ import yaml
 with open("docs/notebooks-data.yml") as f:  # Load notebooks from YAML
     data = yaml.safe_load(f)
 
-# Generate table
+# Generate centered table
 table = [
-    "| Notebook | Open in colab / kaggle | Supporting materials / blog / docs / video | Discussion / arXiv / repository / code |",
-    "|--------|:-----------------------:|:--------------------:|:--------------------------------:|",
+    "| Notebook | Open in Colab / Kaggle | Supporting materials / blog / docs / video | Discussion / arXiv / repository / code |",
+    "|:--------:|:-----------------------:|:-----------------------------------------:|:--------------------------------------:|",
 ]
 
 for nb in data["notebooks"]:
@@ -63,12 +63,12 @@ for nb in data["notebooks"]:
         else ""
     )
 
-    # Add row
+    # Add row (wrap badges in centered <div>)
     table.append(
         f"| {title_link} | "
-        f"{colab_badge} {kaggle_badge} | "
-        f"{youtube_badge} {dataset_badge} {blog_badge} | "
-        f"{arxiv_badge} {discussion_badge} {github_badge} |"
+        f'<div align="center">{colab_badge} {kaggle_badge}</div> | '
+        f'<div align="center">{youtube_badge} {dataset_badge} {blog_badge}</div> | '
+        f'<div align="center">{arxiv_badge} {discussion_badge} {github_badge}</div> |'
     )
 
 table_md = "\n".join(table)
