@@ -12,7 +12,7 @@ with open("docs/notebooks-data.yml") as f:  # Load notebooks from YAML
 # Generate table
 table = [
     "| Notebook | Open in colab / kaggle | Supporting materials | Discussion / arXiv / repository |",
-    "|:--------:|:----------------------:|:---------------------:|:--------------------------------:|",
+    "|:--------:|:-----------------------:|:--------------------:|:--------------------------------:|",
 ]
 
 for nb in data["notebooks"]:
@@ -30,9 +30,9 @@ for nb in data["notebooks"]:
     # Ultralytics blog
     blog_badge = ""
     if nb.get("blog"):
-        blog_badge = f'<a href="{nb["blog"]}"><img src="https://github.com/user-attachments/assets/c60c360b-69de-4228-8545-f83096d5a9ce" alt="YouTube"></a>'
+        blog_badge = f'<a href="{nb["blog"]}"><img src="https://github.com/user-attachments/assets/c60c360b-69de-4228-8545-f83096d5a9ce" alt="Ultralytics Blog"></a>'
 
-    # YouTube badge with custom image
+    # YouTube badge
     youtube_badge = ""
     if nb.get("youtube"):
         youtube_badge = f'<a href="{nb["youtube"]}"><img src="https://badges.aleen42.com/src/youtube.svg" alt="Watch on YouTube"></a>'
@@ -42,28 +42,28 @@ for nb in data["notebooks"]:
     if nb.get("kaggle"):
         kaggle_badge = f'<a href="{nb["kaggle"]}"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Open in Kaggle"></a>'
 
+    # arXiv badge
     arxiv_badge = ""
     if nb.get("arxiv"):
-        arxiv_id = nb["arxiv"].split("/")[
-            -1
-        ]  # Extract ID directly from the URL (e.g., https://arxiv.org/abs/1234.56789)
+        arxiv_id = nb["arxiv"].split("/")[-1]
         arxiv_badge = f"[![arXiv](https://img.shields.io/badge/arXiv-{arxiv_id}-b31b1b.svg)]({nb['arxiv']})"
 
+    # Discussion badge
     discussion_badge = ""
     if nb.get("discussion"):
         discussion_badge = f'<a href="{nb["discussion"]}"><img src="https://github.com/user-attachments/assets/c4a1b18a-c4db-4bb7-b539-313e11171619" alt="Open in Discussion"></a>'
 
+    # GitHub badge
     github_badge = ""
     if nb.get("github"):
-        github_badge = (
-            f'<a href="{nb["github"]}"><img src="https://badges.aleen42.com/src/github.svg" alt="GitHub Repo"></a>'
-        )
+        github_badge = f'<a href="{nb["github"]}"><img src="https://badges.aleen42.com/src/github.svg" alt="GitHub Repo"></a>'
 
+    # Dataset badge
     dataset_badge = ""
     if nb.get("dataset"):
         dataset_badge = f'<a href="{nb["dataset"]}"><img src="https://github.com/user-attachments/assets/73d3a0e3-99ff-421d-84cd-c8ad2585d1b0" alt="Explore dataset"></a>'
 
-    # Add each row
+    # Add row
     table.append(
         f"| {title_link} | "
         f"{colab_badge} {kaggle_badge} | "
