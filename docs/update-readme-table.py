@@ -11,7 +11,7 @@ with open("docs/notebooks-data.yml") as f:  # Load notebooks from YAML
 
 # Generate centered table
 table = [
-    "| Notebook | Open in Colab / Kaggle | Supporting materials / blog / docs / video | Discussion / arXiv / repository / code |",
+    "| Notebook | Open in Colab / explore dataset | Supporting materials / blog / video | Discussion / arXiv / repository |",
     "|:--------:|:-----------------------:|:-----------------------------------------:|:--------------------------------------:|",
 ]
 
@@ -66,8 +66,8 @@ for nb in data["notebooks"]:
     # Add row (wrap badges in centered <div>)
     table.append(
         f"| {title_link} | "
-        f'<div align="center">{colab_badge} {kaggle_badge}</div> | '
-        f'<div align="center">{youtube_badge} {dataset_badge} {blog_badge}</div> | '
+        f'<div align="center">{colab_badge} {dataset_badge}</div> | '
+        f'<div align="center">{youtube_badge} {blog_badge}</div> | '
         f'<div align="center">{arxiv_badge} {discussion_badge} {github_badge}</div> |'
     )
 
