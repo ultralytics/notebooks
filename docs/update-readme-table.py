@@ -11,7 +11,7 @@ with open("docs/notebooks-data.yml") as f:  # Load notebooks from YAML
 
 # Generate table
 table = [
-    "| Notebook | Open in colab / kaggle | Supporting materials | Discussion / arXiv / IEEE / MDPI |",
+    "| Notebook | Open in colab / kaggle | Supporting materials | Discussion / arXiv / repository |",
     "|-------------------------|--------------|---------------|----------------------------|",
 ]
 
@@ -53,11 +53,15 @@ for nb in data["notebooks"]:
     if nb.get("discussion"):
         discussion_badge = f'<a href="{nb["discussion"]}"><img src="https://github.com/user-attachments/assets/c4a1b18a-c4db-4bb7-b539-313e11171619" alt="Open in Discussion"></a>'
 
+    github_badge = ""
+    if nb.get("github"):
+        github_badge = f'<a href="{nb["github"]}"><img src="https://badges.aleen42.com/src/github.svg" alt="GitHub Repo"></a>'
+
     table.append(
         f"| {title_link} | "
         f'<div align="center">{colab_badge} {kaggle_badge}</div> | '
         f'<div align="center">{youtube_badge} {blog_badge}</div> | '
-        f'<div align="center">{arxiv_badge} {discussion_badge}</div> |'
+        f'<div align="center">{arxiv_badge} {github_badge} {discussion_badge}</div> |'
     )
 
 table_md = "\n".join(table)

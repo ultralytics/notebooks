@@ -13,6 +13,7 @@ notebooks:
     kaggle: "https://www.kaggle.com/code/muhammadriz123/medical-pills-detection-using-ultralytics-yolo11"
     blog: "https://www.ultralytics.com/blog/how-to-use-ultralytics-yolo11-for-object-detection"
     discussion: "https://github.com/orgs/ultralytics/discussions/16241"
+    github: "https://github.com/ultralytics/ultralytics"
 
   - title: "Car Parts Segmentation using Ultralytics YOLO"
     link: "https://docs.ultralytics.com/datasets/segment/carparts-seg/"
@@ -21,6 +22,7 @@ notebooks:
     kaggle: "https://www.kaggle.com/code/muhammadriz123/medical-pills-detection-using-ultralytics-yolo11"
     blog: "https://www.ultralytics.com/blog/image-segmentation-with-ultralytics-yolo11-on-google-colab"
     discussion: "https://github.com/orgs/ultralytics/discussions/12751"
+    github: "https://github.com/ultralytics/ultralytics"
 
   - title: "Ultralytics YOLO with SAHI Tiled Inference"
     link: "https://docs.ultralytics.com/guides/sahi-tiled-inference/"
