@@ -11,7 +11,7 @@ with open("docs/notebooks-data.yml") as f:  # Load notebooks from YAML
 
 # Generate table
 table = [
-    "| Notebook | Open in Colab / Kaggle | Supporting materials | Repository / arXiv / Discussion |",
+    "| Notebook | Open in colab / kaggle / other | Supporting materials | Repository / arXiv / discussion |",
     "|-------------------------|--------------|---------------|----------------------------|",
 ]
 
