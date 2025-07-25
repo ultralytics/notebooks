@@ -5,6 +5,9 @@
 
 name: Update Notebooks Table
 
+permissions:
+  contents: write  # Add write permissions for updating the README.md table
+
 on:
   push:
     paths:
