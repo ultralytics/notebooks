@@ -33,15 +33,15 @@ for nb in data["notebooks"]:
         title_link = f"[{nb['title']}]({github_url})"
 
     # Generate all badges
-    colab_badge = f"[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ultralytics/notebooks/blob/main/{nb['file']})"
+    colab_badge = f"[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ultralytics/notebooks/blob/main/{nb['file']})"
     kaggle_badge = (
-        f"[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)]({nb['kaggle']})" if nb.get("kaggle") else ""
+        f"[![Open in Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)]({nb['kaggle']})" if nb.get("kaggle") else ""
     )
     youtube_badge = (
         f"[![Watch on YouTube](https://badges.aleen42.com/src/youtube.svg)]({nb['youtube']})" if nb.get("youtube") else ""
     )
     dataset_badge = (
-        f"[![Explore dataset](https://github.com/user-attachments/assets/ba28acc4-4e17-4fff-bee1-8ab29b00f88e)]({nb['dataset']})"
+        f"[![Explore Dataset](https://img.shields.io/badge/Dataset-%23ff1b6c?logo=ultralytics)]({nb['dataset']})"
         if nb.get("dataset")
         else ""
     )
@@ -51,12 +51,12 @@ for nb in data["notebooks"]:
         else ""
     )
     arxiv_badge = (
-        f"[![arXiv](https://img.shields.io/badge/arXiv-{nb['arxiv'].split('/')[-1]}-b31b1b.svg)]({nb['arxiv']})"
+        f"[![Read arXiv paper](https://img.shields.io/badge/arXiv-{nb['arxiv'].split('/')[-1]}-b31b1b.svg)]({nb['arxiv']})"
         if nb.get("arxiv")
         else ""
     )
     discussion_badge = (
-        f"[![Discussion](https://github.com/user-attachments/assets/c4a1b18a-c4db-4bb7-b539-313e11171619)]({nb['discussion']})"
+        f"[![Read Discussion](https://img.shields.io/badge/Documentation-%237b0068?logo=ultralytics)]({nb['discussion']})"
         if nb.get("discussion")
         else ""
     )
