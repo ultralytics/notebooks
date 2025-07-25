@@ -11,7 +11,7 @@ with open("docs/notebooks-data.yml") as f:  # Load notebooks from YAML
 
 # Generate table
 table = [
-    "| Notebook | Open in colab / kaggle / other | Supporting materials | arXiv / discussion |",
+    "| Notebook | Open in colab / kaggle | Supporting materials | Discussion / arXiv / IEEE / MDPI |",
     "|-------------------------|--------------|---------------|----------------------------|",
 ]
 
@@ -42,10 +42,20 @@ for nb in data["notebooks"]:
     if nb.get("kaggle"):
         kaggle_badge = f'<a href="{nb["kaggle"]}"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Open in Kaggle"></a>'
 
-    discussion = nb.get("discussion", "")
+    arxiv_badge = ""
+    if nb.get("arxiv"):
+        arxiv_id = nb["arxiv"].split("/")[-1]   # Extract ID directly from the URL (e.g., https://arxiv.org/abs/1234.56789)
+        arxiv_badge = f'[![arXiv](https://img.shields.io/badge/arXiv-{arxiv_id}-b31b1b.svg)]({nb["arxiv"]})'
+
+    discussion_badge = ""
+    if nb.get("discussion"):
+        discussion_badge = f'<a href="{nb["blog"]}"><img src="https://github.com/user-attachments/assets/c4a1b18a-c4db-4bb7-b539-313e11171619" alt="YouTube"></a>'
 
     table.append(
-        f'| {title_link} | <div align="center">{colab_badge} {kaggle_badge}</div> | <div align="center">{youtube_badge} {blog_badge}</div> | {discussion} |'
+        f'| {title_link} | '
+        f'<div align="center">{colab_badge} {kaggle_badge}</div> | '
+        f'<div align="center">{youtube_badge} {blog_badge}</div> | '
+        f'<div align="center">{arxiv_badge} {discussion_badge}</div> |'
     )
 
 table_md = "\n".join(table)
