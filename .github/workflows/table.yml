@@ -7,7 +7,9 @@ name: Update Notebooks Table
 
 on:
   push:
-    paths: ['docs/notebooks-data.yml']
+    paths:
+      - 'docs/notebooks-data.yml'
+      - 'docs/update-readme-table.py'
 
 jobs:
   update:
