@@ -36,13 +36,20 @@ for nb in data["notebooks"]:
     youtube_badge = ""
     if nb.get("youtube"):
         youtube_badge = (
-            f'<a href="{nb["youtube"]}"><img src="https://badges.aleen42.com/src/youtube.svg" alt="YouTube"></a>'
+            f'<a href="{nb["youtube"]}"><img src="https://badges.aleen42.com/src/youtube.svg" alt="Watch on YouTube"></a>'
+        )
+
+    # Kaggle badge
+    kaggle_badge = ""
+    if nb.get("kaggle"):
+        kaggle_badge = (
+            f'<a href="{nb["kaggle"]}"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Open in Kaggle"></a>'
         )
 
     discussion = nb.get("discussion", "")
 
     table.append(
-        f'| {title_link} | {colab_badge} | <div align="center">{youtube_badge} {blog_badge}</div> | {discussion} |'
+        f'| {title_link} | <div align="center">{colab_badge} {kaggle_badge}</div> | <div align="center">{youtube_badge} {blog_badge}</div> | {discussion} |'
     )
 
 table_md = "\n".join(table)
