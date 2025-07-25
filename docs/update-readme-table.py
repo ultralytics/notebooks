@@ -30,7 +30,7 @@ for nb in data["notebooks"]:
     # YouTube badge with custom image
     youtube_badge = ""
     if nb.get("youtube"):
-        youtube_badge = f'<a href="{nb["youtube"]}"><center><img width=30% src="https://raw.githubusercontent.com/ultralytics/assets/main/social/logo-social-youtube-rect.png" alt="Ultralytics Youtube Video"></center></a>'
+        youtube_badge = f'<a href="{nb["youtube"]}"><img src="https://badges.aleen42.com/src/youtube.svg" alt="YouTube"></a>'
 
     discussion = nb.get("discussion", "")
 
