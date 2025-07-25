@@ -69,7 +69,7 @@ notebooks:
     youtube: "https://youtu.be/ojoYESWLw5Q"
     blog: "https://www.ultralytics.com/blog/florence-2-microsofts-latest-vision-language-model"
     kaggle: "https://www.kaggle.com/code/muhammadriz123/medical-pills-detection-using-ultralytics-yolo11"
-    arvix: "https://arxiv.org/abs/2311.06242"
+    arxiv: "https://arxiv.org/abs/2311.06242"
 
   - title: "Export Validation Results in Pandas Dataframe, CSV, SQL and Other Formats.ipynb"
     link: "https://docs.ultralytics.com/modes/val/"
