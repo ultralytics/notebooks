@@ -1,5 +1,10 @@
 # Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
 
+# This Python script is responsible for programmatically updating the notebooks
+# table within the README.md file. It ensures that any newly added or modified
+# notebooks are automatically reflected in the documentation, keeping the table
+# accurate and up to date without requiring manual edits.
+
 import yaml
 
 with open('notebooks.yml', 'r') as f:  # Load notebooks from YAML
@@ -33,9 +38,7 @@ for nb in data['notebooks']:
     table.append(f"| {title_link} | {colab_badge} | {youtube_badge} | {discussion} |")
 
 table_md = '\n'.join(table)
-
-# Update README
-with open('README.md', 'r') as f:
+with open('README.md', 'r') as f:  # Update README
     readme = f.read()
 
 start = readme.find('<!-- TABLE_START -->')

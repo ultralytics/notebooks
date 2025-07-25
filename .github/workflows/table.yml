@@ -1,8 +1,13 @@
-name: Update Table
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
+# Ultralytics Actions https://github.com/ultralytics/actions
+# This workflow updates the notebooks table in README.md.
+
+name: Update Notebooks Table
 
 on:
   push:
-    paths: ['notebooks.yml']
+    paths: ['docs/notebooks-data.yml']
 
 jobs:
   update:
@@ -13,7 +18,7 @@ jobs:
       with:
         python-version: '3.x'
     - run: pip install pyyaml
-    - run: python update_table.py
+    - run: python docs/update-readme-table.py
     - run: |
         git config --global user.name "UltralyticsAssistant"
           git config --global user.email "web@ultralytics.com"
