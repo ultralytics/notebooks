@@ -38,10 +38,10 @@ for nb in data["notebooks"]:
         f"[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)]({nb['kaggle']})" if nb.get("kaggle") else ""
     )
     youtube_badge = (
-        f"[![YouTube](https://badges.aleen42.com/src/youtube.svg)]({nb['youtube']})" if nb.get("youtube") else ""
+        f"[![Watch on YouTube](https://badges.aleen42.com/src/youtube.svg)]({nb['youtube']})" if nb.get("youtube") else ""
     )
     dataset_badge = (
-        f"[![Dataset](https://github.com/user-attachments/assets/a12e82ef-4d1d-4ab6-97eb-5306f1bd4283)]({nb['dataset']})"
+        f"[![Explore dataset](https://github.com/user-attachments/assets/ba28acc4-4e17-4fff-bee1-8ab29b00f88e)]({nb['dataset']})"
         if nb.get("dataset")
         else ""
     )
