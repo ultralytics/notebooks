@@ -7,7 +7,7 @@
 
 import yaml
 
-with open('notebooks.yml', 'r') as f:  # Load notebooks from YAML
+with open('notebooks-data.yml', 'r') as f:  # Load notebooks from YAML
     data = yaml.safe_load(f)
 
 # Generate table
