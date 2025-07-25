@@ -35,16 +35,12 @@ for nb in data["notebooks"]:
     # YouTube badge with custom image
     youtube_badge = ""
     if nb.get("youtube"):
-        youtube_badge = (
-            f'<a href="{nb["youtube"]}"><img src="https://badges.aleen42.com/src/youtube.svg" alt="Watch on YouTube"></a>'
-        )
+        youtube_badge = f'<a href="{nb["youtube"]}"><img src="https://badges.aleen42.com/src/youtube.svg" alt="Watch on YouTube"></a>'
 
     # Kaggle badge
     kaggle_badge = ""
     if nb.get("kaggle"):
-        kaggle_badge = (
-            f'<a href="{nb["kaggle"]}"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Open in Kaggle"></a>'
-        )
+        kaggle_badge = f'<a href="{nb["kaggle"]}"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Open in Kaggle"></a>'
 
     discussion = nb.get("discussion", "")
 
