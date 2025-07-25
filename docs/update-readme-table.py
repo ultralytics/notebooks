@@ -41,7 +41,7 @@ for nb in data["notebooks"]:
         f"[![YouTube](https://badges.aleen42.com/src/youtube.svg)]({nb['youtube']})" if nb.get("youtube") else ""
     )
     dataset_badge = (
-        f"[![Dataset](https://github.com/user-attachments/assets/1c1304d2-2cbb-4fe3-bd7d-957b18eab012)]({nb['dataset']})"
+        f"[![Dataset](https://github.com/user-attachments/assets/a12e82ef-4d1d-4ab6-97eb-5306f1bd4283)]({nb['dataset']})"
         if nb.get("dataset")
         else ""
     )
