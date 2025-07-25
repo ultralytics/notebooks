@@ -12,7 +12,7 @@ with open("docs/notebooks-data.yml") as f:  # Load notebooks from YAML
 # Generate table
 table = [
     "| Notebook | Open in colab / kaggle | Supporting materials | Discussion / arXiv / repository |",
-    "|-------------------------|--------------|---------------|----------------------------|",
+    "|:--------:|:----------------------:|:---------------------:|:--------------------------------:|",
 ]
 
 for nb in data["notebooks"]:
@@ -61,13 +61,14 @@ for nb in data["notebooks"]:
 
     dataset_badge = ""
     if nb.get("dataset"):
-        dataset_badge = f'<a href="{nb["dataset"]}"><img src="https://github.com/user-attachments/assets/16c052fa-cbf4-475b-89be-ad98927f4469" alt="Explore dataset"></a>'
+        dataset_badge = f'<a href="{nb["dataset"]}"><img src="https://github.com/user-attachments/assets/73d3a0e3-99ff-421d-84cd-c8ad2585d1b0" alt="Explore dataset"></a>'
 
+    # Add each row
     table.append(
         f"| {title_link} | "
-        f'<div align="center">{colab_badge} {kaggle_badge}</div> | '
-        f'<div align="center">{youtube_badge} {dataset_badge} {blog_badge}</div> | '
-        f'<div align="center">{arxiv_badge} {discussion_badge} {github_badge}</div> |'
+        f"{colab_badge} {kaggle_badge} | "
+        f"{youtube_badge} {dataset_badge} {blog_badge} | "
+        f"{arxiv_badge} {discussion_badge} {github_badge} |"
     )
 
 table_md = "\n".join(table)
