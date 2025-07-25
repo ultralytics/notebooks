@@ -40,7 +40,9 @@ for nb in data["notebooks"]:
 
     discussion = nb.get("discussion", "")
 
-    table.append(f"| {title_link} | {colab_badge} | {youtube_badge} {blog_badge} | {discussion} |")
+    table.append(
+        f"| {title_link} | {colab_badge} | <div align=\"center\">{youtube_badge} {blog_badge}</div> | {discussion} |"
+    )
 
 table_md = "\n".join(table)
 with open("README.md") as f:  # Update README
