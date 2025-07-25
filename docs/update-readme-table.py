@@ -61,7 +61,7 @@ for nb in data["notebooks"]:
 
     dataset_badge = ""
     if nb.get("dataset"):
-        dataset_badge = f'<a href="{nb["dataset"]}"><img src="https://github.com/ultralytics/notebooks/releases/download/v0.0.0/dataset.png" alt="Explore dataset"></a>'
+        dataset_badge = f'<a href="{nb["dataset"]}"><img src="https://github.com/user-attachments/assets/16c052fa-cbf4-475b-89be-ad98927f4469" alt="Explore dataset"></a>'
 
     table.append(
         f"| {title_link} | "
