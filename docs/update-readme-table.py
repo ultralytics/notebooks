@@ -24,25 +24,25 @@ for nb in data["notebooks"]:
         title_link = f"[{nb['title']}]({github_url})"
 
     # Badges
-    colab_badge = f'<a href="https://colab.research.google.com/github/ultralytics/notebooks/blob/main/{nb["file"]}"><img src="https://colab.research.google.com/assets/colab-badge.svg" height="20"></a>'
+    colab_badge = f'<a href="https://colab.research.google.com/github/ultralytics/notebooks/blob/main/{nb["file"]}"><img src="https://colab.research.google.com/assets/colab-badge.svg"></a>'
     kaggle_badge = (
-        f'<a href="{nb.get("kaggle", "")}"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" height="20"></a>'
+        f'<a href="{nb.get("kaggle", "")}"><img src="https://kaggle.com/static/images/open-in-kaggle.svg"></a>'
         if nb.get("kaggle")
         else ""
     )
 
     youtube_badge = (
-        f'<a href="{nb.get("youtube", "")}"><img src="https://badges.aleen42.com/src/youtube.svg" height="20"></a>'
+        f'<a href="{nb.get("youtube", "")}"><img src="https://badges.aleen42.com/src/youtube.svg"></a>'
         if nb.get("youtube")
         else ""
     )
     dataset_badge = (
-        f'<a href="{nb.get("dataset", "")}"><img src="https://github.com/user-attachments/assets/73d3a0e3-99ff-421d-84cd-c8ad2585d1b0" height="20"></a>'
+        f'<a href="{nb.get("dataset", "")}"><img src="https://github.com/user-attachments/assets/73d3a0e3-99ff-421d-84cd-c8ad2585d1b0"></a>'
         if nb.get("dataset")
         else ""
     )
     blog_badge = (
-        f'<a href="{nb.get("blog", "")}"><img src="https://github.com/user-attachments/assets/c60c360b-69de-4228-8545-f83096d5a9ce" height="20"></a>'
+        f'<a href="{nb.get("blog", "")}"><img src="https://github.com/user-attachments/assets/c60c360b-69de-4228-8545-f83096d5a9ce"></a>'
         if nb.get("blog")
         else ""
     )
@@ -53,19 +53,19 @@ for nb in data["notebooks"]:
         arxiv_badge = f"[![arXiv](https://img.shields.io/badge/arXiv-{arxiv_id}-b31b1b.svg)]({nb['arxiv']})"
 
     discussion_badge = (
-        f'<a href="{nb.get("discussion", "")}"><img src="https://github.com/user-attachments/assets/c4a1b18a-c4db-4bb7-b539-313e11171619" height="20"></a>'
+        f'<a href="{nb.get("discussion", "")}"><img src="https://github.com/user-attachments/assets/c4a1b18a-c4db-4bb7-b539-313e11171619"></a>'
         if nb.get("discussion")
         else ""
     )
     github_badge = (
-        f'<a href="{nb.get("github", "")}"><img src="https://badges.aleen42.com/src/github.svg" height="20"></a>'
+        f'<a href="{nb.get("github", "")}"><img src="https://badges.aleen42.com/src/github.svg"></a>'
         if nb.get("github")
         else ""
     )
 
     # Wrap supporting materials in inline-flex
     supporting_materials = (
-        f'<div style="display:inline-flex; gap:4px; align-items:center;">'
+        f'<div style="align-items:center;">'
         f"{dataset_badge} {youtube_badge} {blog_badge}"
         f"</div>"
     )
