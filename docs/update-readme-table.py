@@ -64,11 +64,7 @@ for nb in data["notebooks"]:
     )
 
     # Wrap supporting materials in inline-flex
-    supporting_materials = (
-        f'<div style="align-items:center;">'
-        f"{dataset_badge} {youtube_badge} {blog_badge}"
-        f"</div>"
-    )
+    supporting_materials = f'<div style="align-items:center;">{dataset_badge} {youtube_badge} {blog_badge}</div>'
 
     # Add row
     table.append(
