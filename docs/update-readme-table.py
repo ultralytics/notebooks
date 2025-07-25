@@ -55,7 +55,9 @@ for nb in data["notebooks"]:
 
     github_badge = ""
     if nb.get("github"):
-        github_badge = f'<a href="{nb["github"]}"><img src="https://badges.aleen42.com/src/github.svg" alt="GitHub Repo"></a>'
+        github_badge = (
+            f'<a href="{nb["github"]}"><img src="https://badges.aleen42.com/src/github.svg" alt="GitHub Repo"></a>'
+        )
 
     dataset_badge = ""
     if nb.get("dataset"):
