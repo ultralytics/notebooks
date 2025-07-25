@@ -14,6 +14,7 @@ notebooks:
     blog: "https://www.ultralytics.com/blog/how-to-use-ultralytics-yolo11-for-object-detection"
     discussion: "https://github.com/orgs/ultralytics/discussions/16241"
     github: "https://github.com/ultralytics/ultralytics"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
 
   - title: "Car Parts Segmentation using Ultralytics YOLO"
     link: "https://docs.ultralytics.com/datasets/segment/carparts-seg/"
@@ -31,6 +32,7 @@ notebooks:
     youtube: "https://youtu.be/tq3FU_QczxE"
     kaggle: "https://www.kaggle.com/code/muhammadriz123/medical-pills-detection-using-ultralytics-yolo11"
     discussion: "https://github.com/orgs/ultralytics/discussions/8121"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
 
   - title: "Medical Pills Detection using Ultralytics YOLO"
     link: "https://docs.ultralytics.com/datasets/detect/medical-pills/"
@@ -56,11 +58,13 @@ notebooks:
     youtube: "https://youtu.be/vKcD44GkSF8"
     kaggle: "https://www.kaggle.com/code/muhammadriz123/medical-pills-detection-using-ultralytics-yolo11"
     discussion: "https://github.com/orgs/ultralytics/discussions/8112"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
 
   - title: "Google Gemini Model for Object Detection, Image Captioning and OCR with Ultralytics Utilities"
     file: "notebooks/how-to-use-google-gemini-models-for-object-detection-image-captioning-and-ocr.ipynb"
     youtube: "https://youtu.be/ottsAmFdbmU"
     kaggle: "https://www.kaggle.com/code/muhammadriz123/medical-pills-detection-using-ultralytics-yolo11"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
 
   - title: "Automatic Number Plate Recognition with Ultralytics YOLO and OpenAI GPT-4o"
     file: "notebooks/how-to-use-ultralytics-yolo-with-openai-for-number-plate-recognition.ipynb"
@@ -68,6 +72,7 @@ notebooks:
     blog: "https://www.ultralytics.com/blog/build-an-anpr-system-with-ultralytics-yolo11-and-gpt-4o-mini"
     kaggle: "https://www.kaggle.com/code/muhammadriz123/medical-pills-detection-using-ultralytics-yolo11"
     discussion: "https://github.com/orgs/ultralytics/discussions"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
 
   - title: "Microsoft Florence-2 for Object Detection, Image Captioning, OCR and Segmentation with Ultralytics Package"
     file: "notebooks/how-to-use-florence-2-for-object-detection-image-captioning-ocr-and-segmentation.ipynb"
@@ -75,12 +80,14 @@ notebooks:
     blog: "https://www.ultralytics.com/blog/florence-2-microsofts-latest-vision-language-model"
     kaggle: "https://www.kaggle.com/code/muhammadriz123/medical-pills-detection-using-ultralytics-yolo11"
     arxiv: "https://arxiv.org/abs/2311.06242"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
 
   - title: "Export Validation Results in Pandas Dataframe, CSV, SQL and Other Formats.ipynb"
     link: "https://docs.ultralytics.com/modes/val/"
     file: "notebooks/how-to-export-the-validation-results-into-dataframe-csv-sql-and-other-formats.ipynb"
     youtube: "https://youtu.be/j8uQc0qB91s"
     discussion: "https://github.com/orgs/ultralytics/discussions/8153"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
 
   - title: "HomeObjects-3K Dataset for Everyday Object Detection"
     link: "https://docs.ultralytics.com/datasets/detect/homeobjects-3k/"
@@ -95,6 +102,7 @@ notebooks:
     youtube: "https://youtu.be/4ezde5-nZZw"
     blog: "https://www.ultralytics.com/blog/ultralytics-yolo11-and-computer-vision-in-smart-supermarkets"
     discussion: "https://github.com/orgs/ultralytics/discussions/10068"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
 
   - title: "Monitor Your Workouts using Ultralytics YOLO"
     link: "https://docs.ultralytics.com/guides/workouts-monitoring/"
@@ -102,6 +110,7 @@ notebooks:
     youtube: "https://youtu.be/LGGxqLZtvuw"
     blog: "https://www.ultralytics.com/blog/smart-fitness-technology-enabled-by-ultralytics-yolo11"
     discussion: "https://github.com/orgs/ultralytics/discussions/8820"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
 
   - title: "Package Segmentation using Ultralytics YOLO"
     link: "https://docs.ultralytics.com/datasets/segment/package-seg/"
@@ -109,12 +118,14 @@ notebooks:
     youtube: "https://youtu.be/ZF7EAodHn1U"
     blog: "https://www.ultralytics.com/blog/package-identification-and-segmentation-with-ultralytics-yolo11"
     discussion: "https://github.com/orgs/ultralytics/discussions/18338"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
 
   - title: "Track Objects in a Zone using Ultralytics YOLO"
     link: "https://docs.ultralytics.com/guides/trackzone/"
     file: "notebooks/how-to-track-the-objects-in-zone-using-ultralytics-yolo.ipynb"
     youtube: "https://youtu.be/SMSJvjUG1ko"
     discussion: "https://github.com/orgs/ultralytics/discussions/17962"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
 
   - title: "Inference using SAM and SAM2 with Ultralytics"
     link: "https://docs.ultralytics.com/models/sam/"
@@ -122,6 +133,7 @@ notebooks:
     youtube: "https://youtu.be/yXQPLMrNX2s"
     blog: "https://www.ultralytics.com/blog/applications-of-meta-ai-segment-anything-model-2-sam-2"
     discussion: "https://github.com/orgs/ultralytics/discussions/14830"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
 
   - title: "Crack Segmentation using Ultralytics YOLO"
     link: "https://docs.ultralytics.com/datasets/segment/crack-seg/"
@@ -129,6 +141,7 @@ notebooks:
     youtube: "https://youtu.be/C4mc40YKm-g"
     blog: "https://www.ultralytics.com/blog/using-ai-for-crack-detection-and-segmentation"
     discussion: "https://github.com/orgs/ultralytics/discussions/9817"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
 
   - title: "Queue Management using Ultralytics Solutions"
     link: "https://docs.ultralytics.com/guides/queue-management/"
@@ -136,3 +149,4 @@ notebooks:
     youtube: "https://youtu.be/gX5kSRD56Gs"
     blog: "https://www.ultralytics.com/blog/a-look-at-real-time-queue-monitoring-enabled-by-computer-vision"
     discussion: "https://github.com/orgs/ultralytics/discussions/11226"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
