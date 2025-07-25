@@ -6,13 +6,20 @@
 
 import yaml
 
-with open("docs/notebooks-data.yml") as f:  # Load notebooks from YAML
+with open("docs/notebooks-data.yml") as f:
     data = yaml.safe_load(f)
 
-# Generate centered table
+def center_badges(*badges):
+    """Center align badges, handling empty cells"""
+    non_empty = [badge for badge in badges if badge.strip()]
+    if not non_empty:
+        return "<div align='center'>-</div>"
+    return f"<div align='center'>{' '.join(non_empty)}</div>"
+
+# Generate table with proper alignment
 table = [
     "| Notebook | Open in colab / kaggle | Supporting materials | Discussion / arXiv / Repository |",
-    "|:--------:|:-----------------------:|:--------------------:|:--------------------------------:|",
+    "|:--------:|:----------------------:|:-------------------:|:-------------------------------:|",
 ]
 
 for nb in data["notebooks"]:
@@ -23,42 +30,22 @@ for nb in data["notebooks"]:
         github_url = f"https://github.com/ultralytics/notebooks/blob/main/{nb['file']}"
         title_link = f"[{nb['title']}]({github_url})"
 
-    # Badges using pure Markdown style
+    # Generate all badges
     colab_badge = f"[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ultralytics/notebooks/blob/main/{nb['file']})"
-    kaggle_badge = (
-        f"[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)]({nb['kaggle']})" if nb.get("kaggle") else ""
-    )
-    youtube_badge = (
-        f"[![YouTube](https://badges.aleen42.com/src/youtube.svg)]({nb['youtube']})" if nb.get("youtube") else ""
-    )
-    dataset_badge = (
-        f"[![Dataset](https://github.com/user-attachments/assets/73d3a0e3-99ff-421d-84cd-c8ad2585d1b0)]({nb['dataset']})"
-        if nb.get("dataset")
-        else ""
-    )
-    blog_badge = (
-        f"[![Ultralytics Blog](https://github.com/user-attachments/assets/c60c360b-69de-4228-8545-f83096d5a9ce)]({nb['blog']})"
-        if nb.get("blog")
-        else ""
-    )
-    arxiv_badge = (
-        f"[![arXiv](https://img.shields.io/badge/arXiv-{nb['arxiv'].split('/')[-1]}-b31b1b.svg)]({nb['arxiv']})"
-        if nb.get("arxiv")
-        else ""
-    )
-    discussion_badge = (
-        f"[![Discussion](https://github.com/user-attachments/assets/c4a1b18a-c4db-4bb7-b539-313e11171619)]({nb['discussion']})"
-        if nb.get("discussion")
-        else ""
-    )
+    kaggle_badge = f"[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)]({nb['kaggle']})" if nb.get("kaggle") else ""
+    youtube_badge = f"[![YouTube](https://badges.aleen42.com/src/youtube.svg)]({nb['youtube']})" if nb.get("youtube") else ""
+    dataset_badge = f"[![Dataset](https://github.com/user-attachments/assets/73d3a0e3-99ff-421d-84cd-c8ad2585d1b0)]({nb['dataset']})" if nb.get("dataset") else ""
+    blog_badge = f"[![Ultralytics Blog](https://github.com/user-attachments/assets/c60c360b-69de-4228-8545-f83096d5a9ce)]({nb['blog']})" if nb.get("blog") else ""
+    arxiv_badge = f"[![arXiv](https://img.shields.io/badge/arXiv-{nb['arxiv'].split('/')[-1]}-b31b1b.svg)]({nb['arxiv']})" if nb.get("arxiv") else ""
+    discussion_badge = f"[![Discussion](https://github.com/user-attachments/assets/c4a1b18a-c4db-4bb7-b539-313e11171619)]({nb['discussion']})" if nb.get("discussion") else ""
     github_badge = f"[![GitHub](https://badges.aleen42.com/src/github.svg)]({nb['github']})" if nb.get("github") else ""
 
-    # Update these lines in your code:
+    # Add row with proper centering
     table.append(
         f"| {title_link} | "
-        f"{colab_badge} {kaggle_badge} | "  # Remove <p align='center'>
-        f"{youtube_badge} {dataset_badge} {blog_badge} | "  # Remove <p align='center'>
-        f"{arxiv_badge} {discussion_badge} {github_badge} |"  # Remove <p align='center'>
+        f"{center_badges(colab_badge, kaggle_badge)} | "
+        f"{center_badges(youtube_badge, dataset_badge, blog_badge)} | "
+        f"{center_badges(arxiv_badge, discussion_badge, github_badge)} |"
     )
 
 table_md = "\n".join(table)
