@@ -42,7 +42,10 @@ for nb in data["notebooks"]:
 
     # Append row
     table.append(
-        f"| {title_link} | {colab_badge} {kaggle_badge} | {youtube_badge} {dataset_badge} {blog_badge} | {arxiv_badge} {discussion_badge} {github_badge} |"
+        f"| {title_link} | "
+        f"<p align='center'>{colab_badge} {kaggle_badge}</p> | "
+        f"<p align='center'>{youtube_badge} {dataset_badge} {blog_badge}</p> | "
+        f"<p align='center'>{arxiv_badge} {discussion_badge} {github_badge}</p> |"
     )
 
 table_md = "\n".join(table)
