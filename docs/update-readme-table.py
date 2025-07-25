@@ -35,7 +35,9 @@ for nb in data["notebooks"]:
     # Generate all badges
     colab_badge = f"[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ultralytics/notebooks/blob/main/{nb['file']})"
     kaggle_badge = (
-        f"[![Open in Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)]({nb['kaggle']})" if nb.get("kaggle") else ""
+        f"[![Open in Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)]({nb['kaggle']})"
+        if nb.get("kaggle")
+        else ""
     )
     youtube_badge = (
         f"[![Watch on YouTube](https://badges.aleen42.com/src/youtube.svg)]({nb['youtube']})"
