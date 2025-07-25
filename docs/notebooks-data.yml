@@ -1,3 +1,10 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
+# This file contains all essential information about the notebooks, including their
+# titles, links, and any relevant YouTube videos. Any modifications made here are
+# automatically propagated to the README.md file, ensuring that the documentation
+# remains consistent and always up to date.
+
 notebooks:
   - title: "Detect, Segment, Classify, Pose using Ultralytics YOLO"
     link: "https://docs.ultralytics.com/tasks/"
