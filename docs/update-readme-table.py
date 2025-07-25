@@ -34,7 +34,7 @@ for nb in data["notebooks"]:
     colab_badge = f"[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ultralytics/notebooks/blob/main/{nb['file']})"
     kaggle_badge = f"[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)]({nb['kaggle']})" if nb.get("kaggle") else ""
     youtube_badge = f"[![YouTube](https://badges.aleen42.com/src/youtube.svg)]({nb['youtube']})" if nb.get("youtube") else ""
-    dataset_badge = f"[![Dataset](https://github.com/user-attachments/assets/73d3a0e3-99ff-421d-84cd-c8ad2585d1b0)]({nb['dataset']})" if nb.get("dataset") else ""
+    dataset_badge = f"[![Dataset](https://github.com/user-attachments/assets/608fb173-1cbf-43d8-8067-8c5ee4dcc600)]({nb['dataset']})" if nb.get("dataset") else ""
     blog_badge = f"[![Ultralytics Blog](https://github.com/user-attachments/assets/c60c360b-69de-4228-8545-f83096d5a9ce)]({nb['blog']})" if nb.get("blog") else ""
     arxiv_badge = f"[![arXiv](https://img.shields.io/badge/arXiv-{nb['arxiv'].split('/')[-1]}-b31b1b.svg)]({nb['arxiv']})" if nb.get("arxiv") else ""
     discussion_badge = f"[![Discussion](https://github.com/user-attachments/assets/c4a1b18a-c4db-4bb7-b539-313e11171619)]({nb['discussion']})" if nb.get("discussion") else ""
