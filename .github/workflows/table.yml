@@ -1,0 +1,22 @@
+name: Update Table
+
+on:
+  push:
+    paths: ['notebooks.yml']
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    - run: pip install pyyaml
+    - run: python update_table.py
+    - run: |
+        git config --global user.name "UltralyticsAssistant"
+          git config --global user.email "web@ultralytics.com"
+        git add README.md
+        git diff --staged --quiet || git commit -m "Update table"
+        git push
