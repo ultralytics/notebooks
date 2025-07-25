@@ -11,7 +11,7 @@ with open("docs/notebooks-data.yml") as f:  # Load notebooks from YAML
 
 # Generate table
 table = [
-    "| Notebook | Open in Colab / Kaggle | Supporting materials | Discussion / arXiv / Repository |",
+    "| Notebook | Open in colab / kaggle | Supporting materials | Discussion / arXiv / Repository |",
     "|:--------:|:-----------------------:|:--------------------:|:--------------------------------:|",
 ]
 
@@ -63,12 +63,12 @@ for nb in data["notebooks"]:
         else ""
     )
 
-    # Wrap supporting materials in inline-flex
-    supporting_materials = f'<div style="align-items:center;">{dataset_badge} {youtube_badge} {blog_badge}</div>'
-
     # Add row
     table.append(
-        f"| {title_link} | {colab_badge} {kaggle_badge} | {supporting_materials} | {arxiv_badge} {discussion_badge} {github_badge} |"
+        f"| {title_link} | "
+        f"{colab_badge} {kaggle_badge} | "
+        f"{youtube_badge} {dataset_badge} {blog_badge} | "
+        f"{arxiv_badge} {discussion_badge} {github_badge} |"
     )
 
 table_md = "\n".join(table)
