@@ -67,8 +67,8 @@ for nb in data["notebooks"]:
     table.append(
         f"| {title_link} | "
         f'<div align="center">{colab_badge} {dataset_badge}</div> | '
-        f'<div align="center">{youtube_badge} {blog_badge}</div> | '
-        f'<div align="center">{arxiv_badge} {discussion_badge} {github_badge}</div> |'
+        f'<div align="center">{blog_badge} {youtube_badge}</div> | '
+        f'<div align="center">{github_badge} {arxiv_badge} {discussion_badge}</div> |'
     )
 
 table_md = "\n".join(table)
