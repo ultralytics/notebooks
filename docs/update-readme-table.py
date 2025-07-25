@@ -27,6 +27,12 @@ for nb in data["notebooks"]:
     colab_url = f"https://colab.research.google.com/github/ultralytics/notebooks/blob/main/{nb['file']}"
     colab_badge = f'<a href="{colab_url}"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>'
 
+    # Ultralytics blog
+    blog_badge = ""
+    if nb.get("blog"):
+        blog_badge = (
+            f'<a href="{nb["blog"]}"><img src="https://github.com/user-attachments/assets/c60c360b-69de-4228-8545-f83096d5a9ce" alt="YouTube"></a>'
+        )
     # YouTube badge with custom image
     youtube_badge = ""
     if nb.get("youtube"):
@@ -36,7 +42,7 @@ for nb in data["notebooks"]:
 
     discussion = nb.get("discussion", "")
 
-    table.append(f"| {title_link} | {colab_badge} | {youtube_badge} | {discussion} |")
+    table.append(f"| {title_link} | {colab_badge} | {youtube_badge} + {blog_badge} | {discussion} |")
 
 table_md = "\n".join(table)
 with open("README.md") as f:  # Update README

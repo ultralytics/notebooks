@@ -10,6 +10,7 @@ notebooks:
     link: "https://docs.ultralytics.com/tasks/"
     file: "examples/tutorial.ipynb"
     youtube: "https://youtu.be/NAs-cfq9BDw"
+    blog: "https://www.ultralytics.com/blog/manufacturing-robotics-in-manufacturing"
     discussion: "[Learn](https://github.com/orgs/ultralytics/discussions/16241) about Ultralytics tasks, including [object detection](https://docs.ultralytics.com/tasks/detect/), [segmentation](https://docs.ultralytics.com/tasks/segment/), and more."
 
   - title: "Car Parts Segmentation using Ultralytics YOLO"
