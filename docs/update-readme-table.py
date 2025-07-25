@@ -58,7 +58,7 @@ for nb in data["notebooks"]:
         else ""
     )
     discussion_badge = (
-        f"[![Read Discussion](https://img.shields.io/badge/Documentation-%237b0068?logo=ultralytics)]({nb['discussion']})"
+        f"[![Read Discussion](https://img.shields.io/badge/Documentation-E1FF25?logo=ultralytics)]({nb['discussion']})"
         if nb.get("discussion")
         else ""
     )
