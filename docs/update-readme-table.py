@@ -38,7 +38,9 @@ for nb in data["notebooks"]:
         f"[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)]({nb['kaggle']})" if nb.get("kaggle") else ""
     )
     youtube_badge = (
-        f"[![Watch on YouTube](https://badges.aleen42.com/src/youtube.svg)]({nb['youtube']})" if nb.get("youtube") else ""
+        f"[![Watch on YouTube](https://badges.aleen42.com/src/youtube.svg)]({nb['youtube']})"
+        if nb.get("youtube")
+        else ""
     )
     dataset_badge = (
         f"[![Explore dataset](https://github.com/user-attachments/assets/ba28acc4-4e17-4fff-bee1-8ab29b00f88e)]({nb['dataset']})"
