@@ -12,7 +12,7 @@ with open("docs/notebooks-data.yml") as f:  # Load notebooks from YAML
 # Generate table
 table = [
     "| Notebook | Open in colab / kaggle | Supporting materials | Discussion / arXiv / repository / code |",
-    "|--------:|:-----------------------:|:--------------------:|:--------------------------------:|",
+    "|--------|:-----------------------:|:--------------------:|:--------------------------------:|",
 ]
 
 for nb in data["notebooks"]:
