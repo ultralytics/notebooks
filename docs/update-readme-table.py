@@ -78,7 +78,7 @@ for notebook in data["notebooks"]:
     # Add row with proper centering
     table.append(
         f"| {title_link} | "
-        f"{center_badges(colab_badge, kaggle_badge)} | "
+        f"{center_badges(colab_badge, kaggle_badge, amazon_sagemaker_badge)} | "
         f"{center_badges(youtube_badge, dataset_badge, blog_badge)} | "
         f"{center_badges(arxiv_badge, documentation_badge, github_badge)} |"
     )
