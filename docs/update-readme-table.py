@@ -2,8 +2,7 @@
 
 # This Python script is responsible for programmatically updating the notebooks
 # table within the README.md file. It ensures that any newly added or modified
-# notebooks are automatically reflected in the documentation, keeping the table
-# accurate and up to date without requiring manual edits.
+# notebooks are automatically reflected in the documentation.
 
 import yaml
 
