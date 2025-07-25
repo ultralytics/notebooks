@@ -1,8 +1,8 @@
 # Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
 
-# This Python script is responsible for programmatically updating the notebooks
-# table within the README.md file. It ensures that any newly added or modified
-# notebooks are automatically reflected in the documentation.
+# Programmatically updating the notebooks table within the README.md file.
+# It ensures that any newly added or modified notebooks are automatically
+# reflected in the documentation.
 
 import yaml
 
