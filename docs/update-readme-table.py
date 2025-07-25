@@ -53,12 +53,12 @@ for nb in data["notebooks"]:
     )
     github_badge = f"[![GitHub](https://badges.aleen42.com/src/github.svg)]({nb['github']})" if nb.get("github") else ""
 
-    # Append row
+    # Update these lines in your code:
     table.append(
         f"| {title_link} | "
-        f"<p align='center'>{colab_badge} {kaggle_badge}</p> | "
-        f"<p align='center'>{youtube_badge} {dataset_badge} {blog_badge}</p> | "
-        f"<p align='center'>{arxiv_badge} {discussion_badge} {github_badge}</p> |"
+        f"{colab_badge} {kaggle_badge} | "  # Remove <p align='center'>
+        f"{youtube_badge} {dataset_badge} {blog_badge} | "  # Remove <p align='center'>
+        f"{arxiv_badge} {discussion_badge} {github_badge} |"  # Remove <p align='center'>
     )
 
 table_md = "\n".join(table)
