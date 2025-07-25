@@ -49,7 +49,7 @@ for nb in data["notebooks"]:
 
     discussion_badge = ""
     if nb.get("discussion"):
-        discussion_badge = f'<a href="{nb["blog"]}"><img src="https://github.com/user-attachments/assets/c4a1b18a-c4db-4bb7-b539-313e11171619" alt="YouTube"></a>'
+        discussion_badge = f'<a href="{nb["discussion"]}"><img src="https://github.com/user-attachments/assets/c4a1b18a-c4db-4bb7-b539-313e11171619" alt="Open in Discussion"></a>'
 
     table.append(
         f'| {title_link} | '
