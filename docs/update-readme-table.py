@@ -50,6 +50,6 @@ if start != -1 and end != -1:
     with open("README.md", "w") as f:
         f.write(new_readme)
 
-    print(f"✅ Updated table with {len(data['notebooks'])} notebooks")
+    print(f"✅ Updated table with {len(data['notebooks'])} notebooks.")
 else:
-    print("❌ Add <!-- TABLE_START --> and <!-- TABLE_END --> markers to README.md")
+    print("❌ Add <!-- TABLE_START --> and <!-- TABLE_END --> markers to README.md.")
