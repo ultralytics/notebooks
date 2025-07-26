@@ -44,7 +44,7 @@ for nb in data["notebooks"]:
         else ""
     )
     dataset_badge = (
-        f"[![Explore Dataset](https://img.shields.io/badge/Documentation-042AFF?logo=ultralytics)]({nb['dataset']})"
+        f"[![Explore Dataset](https://img.shields.io/badge/Dataset-%23ff1b6c?logo=ultralytics)]({nb['dataset']})"
         if nb.get("dataset")
         else ""
     )
@@ -59,7 +59,7 @@ for nb in data["notebooks"]:
         else ""
     )
     discussion_badge = (
-        f"[![Explore documentation](https://img.shields.io/badge/Documentation-111F68?logo=ultralytics)]({nb['discussion']})"
+        f"[![Explore documentation](https://img.shields.io/badge/Documentation-042AFF?logo=ultralytics)]({nb['discussion']})"
         if nb.get("discussion")
         else ""
     )
