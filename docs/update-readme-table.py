@@ -8,18 +8,9 @@ import yaml
 with open("docs/notebooks-data.yml") as f:
     data = yaml.safe_load(f)
 
-
-def center_badges(*badges):
-    """Center align badges, handling empty cells."""
-    non_empty = [badge for badge in badges if badge.strip()]
-    if not non_empty:
-        return "<div align='center'>-</div>"
-    return f"<div align='center'>{' '.join(non_empty)}</div>"
-
-
 # Generate table with proper alignment
 table = [
-    "| Notebook | Open in colab / kaggle | Supporting materials | Discussion / arXiv / Repository |",
+    "| Notebook | Open in colab / kaggle | Supporting materials | Documentation / arXiv / Repository |",
     "|:--------:|:----------------------:|:-------------------:|:-------------------------------:|",
 ]
 
@@ -44,7 +35,7 @@ for nb in data["notebooks"]:
         else ""
     )
     dataset_badge = (
-        f"[![Explore Dataset](https://github.com/user-attachments/assets/e9e2aec2-d8f7-492d-a65c-7ed09730a23d)]({nb['dataset']})"
+        f"[![Explore Dataset](https://img.shields.io/badge/Dataset-%23ff1b6c?logo=ultralytics)]({nb['dataset']})"
         if nb.get("dataset")
         else ""
     )
@@ -59,7 +50,7 @@ for nb in data["notebooks"]:
         else ""
     )
     discussion_badge = (
-        f"[![Read Discussion](https://img.shields.io/badge/Documentation-E1FF25?logo=ultralytics)]({nb['discussion']})"
+        f"[![Explore documentation](https://img.shields.io/badge/Documentation-111F68?logo=ultralytics)]({nb['discussion']})"
         if nb.get("discussion")
         else ""
     )
@@ -68,9 +59,9 @@ for nb in data["notebooks"]:
     # Add row with proper centering
     table.append(
         f"| {title_link} | "
-        f"{center_badges(colab_badge, kaggle_badge)} | "
-        f"{center_badges(youtube_badge, dataset_badge, blog_badge)} | "
-        f"{center_badges(arxiv_badge, discussion_badge, github_badge)} |"
+        f"{colab_badge, kaggle_badge} | "
+        f"{youtube_badge, dataset_badge, blog_badge} | "
+        f"{arxiv_badge, discussion_badge, github_badge} |"
     )
 
 table_md = "\n".join(table)
