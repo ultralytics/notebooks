@@ -68,7 +68,7 @@ for notebook in data["notebooks"]:
         else ""
     )
     documentation_badge = (
-        f"[![Read Documentation](https://img.shields.io/badge/Documentation-E1FF25?logo=ultralytics&logoColor=black)]({notebook['documentation']})"
+        f"[![Read Documentation](https://img.shields.io/badge/Documentation-042AFF?logo=ultralytics)]({notebook['documentation']})"
         if notebook.get("documentation")
         else ""
     )
