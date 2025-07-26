@@ -5,13 +5,6 @@
 # automatically rendered to the README.md file, ensuring that the table remains up to date.
 
 notebooks:
-  - title: "Detect, Segment, Classify, Pose using Ultralytics YOLO"
-    file: "examples/tutorial.ipynb"
-    youtube: "https://youtu.be/NAs-cfq9BDw"
-    blog: "https://www.ultralytics.com/blog/how-to-use-ultralytics-yolo11-for-object-detection"
-    discussion: "https://github.com/orgs/ultralytics/discussions/16241"
-    github: "https://github.com/ultralytics/ultralytics"
-
   - title: "Car Parts Segmentation using Ultralytics YOLO"
     file: "notebooks/how-to-train-ultralytics-yolo-on-carparts-segmentation-dataset.ipynb"
     youtube: "https://youtu.be/HATMPgLYAPU"
