@@ -20,7 +20,7 @@ def center_badges(*badges):
 # Generate table with proper alignment
 table = [
     "| Notebook | Open in colab / kaggle | Supporting materials | Documentation / arXiv / Repository |",
-    "|:--------:|:----------------------:|:-------------------:|:-------------------------------:|",
+    "|--------|:----------------------:|:-------------------:|:-------------------------------:|",
 ]
 
 for nb in data["notebooks"]:
