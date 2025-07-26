@@ -19,8 +19,8 @@ def center_badges(*badges):
 
 # Generate table with proper alignment
 table = [
-    "| Notebook | Open in colab / kaggle | Supporting materials | Discussion / arXiv / Repository |",
-    "|:--------:|:----------------------:|:-------------------:|:-------------------------------:|",
+    "| Notebook | Open in colab / kaggle / sagemaker studio | Supporting materials | Documentation / arXiv / Repository |",
+    "|--------|:----------------------:|:-------------------:|:-------------------------------:|",
 ]
 
 for notebook in data["notebooks"]:
@@ -74,7 +74,7 @@ for notebook in data["notebooks"]:
     )
     github_badge = f"[![GitHub](https://badges.aleen42.com/src/github.svg)]({notebook['github']})" if notebook.get("github") else ""
 
-    # Add row with proper centering
+    # Append row with proper centering
     table.append(
         f"| {title_link} | "
         f"{center_badges(colab_badge, kaggle_badge, amazon_sagemaker_badge)} | "
