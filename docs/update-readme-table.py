@@ -28,7 +28,7 @@ for nb in data["notebooks"]:
     if nb.get("file"):
         title_link = f'<a href="{nb["file"]}">{nb["title"]}</a>'
     else:
-        if nb["title"] == "Detect, Segment, Classify, Pose using Ultralytics YOLO":
+        if nb["file"] == "examples/tutorial.ipynb":
             github_url = f"https://github.com/ultralytics/ultralytics/blob/main/{nb['file']}"
         else:
             github_url = f"https://github.com/ultralytics/notebooks/blob/main/{nb['file']}"
