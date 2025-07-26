@@ -28,7 +28,6 @@ jobs:
         git config --global user.email "web@ultralytics.com"
         git add README.md
         git diff --staged --quiet || git commit -m "Update-table by  by https://ultralytics.com/actions"
-        # ignore GH013 error
         git push || {
           echo "Push rejected due to branch protection (GH013). Skipping push."
           exit 0
