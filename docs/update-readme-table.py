@@ -34,10 +34,12 @@ for notebook in data["notebooks"]:
     # Generate all badges
     colab_url = f"https://colab.research.google.com/github/ultralytics/notebooks/blob/main/{notebook['file']}"
     colab_badge = f"[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)]({colab_url})"
-    
-    kaggle_url = f"https://kaggle.com/kernels/welcome?src=https://github.com/ultralytics/notebooks/blob/main/{notebook['file']}"
+
+    kaggle_url = (
+        f"https://kaggle.com/kernels/welcome?src=https://github.com/ultralytics/notebooks/blob/main/{notebook['file']}"
+    )
     kaggle_badge = f"[![Open in Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)]({kaggle_url})"
-    
+
     amazon_sagemaker_url = (
         f"https://studiolab.sagemaker.aws/import/github/ultralytics/notebooks/blob/main/{notebook['file']}"
     )
@@ -46,7 +48,7 @@ for notebook in data["notebooks"]:
         if notebook.get("file")
         else ""
     )
-    
+
     youtube_badge = (
         f"[![Watch on YouTube](https://badges.aleen42.com/src/youtube.svg)]({notebook['youtube']})"
         if notebook.get("youtube")
@@ -72,7 +74,11 @@ for notebook in data["notebooks"]:
         if notebook.get("documentation")
         else ""
     )
-    github_badge = f"[![GitHub](https://badges.aleen42.com/src/github.svg)]({notebook['github']})" if notebook.get("github") else ""
+    github_badge = (
+        f"[![GitHub](https://badges.aleen42.com/src/github.svg)]({notebook['github']})"
+        if notebook.get("github")
+        else ""
+    )
 
     # Append row with proper centering
     table.append(
