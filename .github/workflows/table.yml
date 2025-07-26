@@ -25,7 +25,11 @@ jobs:
     - run: python docs/update-readme-table.py
     - run: |
         git config --global user.name "UltralyticsAssistant"
-          git config --global user.email "web@ultralytics.com"
+        git config --global user.email "web@ultralytics.com"
         git add README.md
         git diff --staged --quiet || git commit -m "Update-table by  by https://ultralytics.com/actions"
-        git push
+        # ignore GH013 error
+        git push || {
+          echo "Push rejected due to branch protection (GH013). Skipping push."
+          exit 0
+        }
