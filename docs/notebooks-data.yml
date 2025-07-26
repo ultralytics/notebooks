@@ -1,0 +1,110 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
+# This file contains all information about the notebooks, including their titles, links,
+# and other relevant resources i.e. blog, dataset etc. Any modifications made here are
+# automatically rendered to the README.md file, ensuring that the table remains up to date.
+
+notebooks:
+  - title: "Car Parts Segmentation using Ultralytics YOLO"
+    file: "notebooks/how-to-train-ultralytics-yolo-on-carparts-segmentation-dataset.ipynb"
+    youtube: "https://youtu.be/HATMPgLYAPU"
+    blog: "https://www.ultralytics.com/blog/image-segmentation-with-ultralytics-yolo11-on-google-colab"
+    discussion: "https://github.com/orgs/ultralytics/discussions/12751"
+    github: "https://github.com/ultralytics/ultralytics"
+    dataset: "https://docs.ultralytics.com/datasets/segment/carparts-seg/"
+
+  - title: "Ultralytics YOLO with SAHI Tiled Inference"
+    file: "notebooks/how-to-use-ultralytics-yolo-with-sahi.ipynb"
+    youtube: "https://youtu.be/tq3FU_QczxE"
+    discussion: "https://github.com/orgs/ultralytics/discussions/8121"
+
+  - title: "Medical Pills Detection using Ultralytics YOLO"
+    file: "notebooks/how-to-train-ultralytics-yolo-on-medical-pills-dataset.ipynb"
+    youtube: "https://youtu.be/8gePl_Zcs5c"
+    blog: "https://www.ultralytics.com/blog/a-deep-dive-into-detecting-pills-using-ultralytics-yolo11"
+    discussion: "https://github.com/orgs/ultralytics/discussions/18515"
+    dataset: "https://docs.ultralytics.com/datasets/detect/medical-pills/"
+
+  - title: "Brain Tumor Detection using Ultralytics YOLO"
+    file: "notebooks/how-to-train-ultralytics-yolo-on-brain-tumor-detection-dataset.ipynb"
+    youtube: "https://youtu.be/ogTBBD8McRk"
+    blog: "https://www.ultralytics.com/blog/using-yolo11-for-tumor-detection-in-medical-imaging"
+    discussion: "https://github.com/orgs/ultralytics/discussions/9101"
+    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor/"
+
+  - title: "Object Counting using Ultralytics YOLO"
+    file: "notebooks/how-to-count-the-objects-using-ultralytics-yolo.ipynb"
+    youtube: "https://youtu.be/vKcD44GkSF8"
+    discussion: "https://github.com/orgs/ultralytics/discussions/8112"
+
+  - title: "Google Gemini Model for Object Detection, Image Captioning and OCR with Ultralytics Utilities"
+    file: "notebooks/how-to-use-google-gemini-models-for-object-detection-image-captioning-and-ocr.ipynb"
+    youtube: "https://youtu.be/ottsAmFdbmU"
+    arxiv: "https://arxiv.org/abs/2312.11805"
+
+  - title: "Automatic Number Plate Recognition with Ultralytics YOLO and OpenAI GPT-4o"
+    file: "notebooks/how-to-use-ultralytics-yolo-with-openai-for-number-plate-recognition.ipynb"
+    youtube: "https://youtu.be/HS3Ta7c0zuI"
+    blog: "https://www.ultralytics.com/blog/build-an-anpr-system-with-ultralytics-yolo11-and-gpt-4o-mini"
+    discussion: "https://github.com/orgs/ultralytics/discussions"
+
+  - title: "Microsoft Florence-2 for Object Detection, Image Captioning, OCR and Segmentation with Ultralytics Package"
+    file: "notebooks/how-to-use-florence-2-for-object-detection-image-captioning-ocr-and-segmentation.ipynb"
+    youtube: "https://youtu.be/ojoYESWLw5Q"
+    blog: "https://www.ultralytics.com/blog/florence-2-microsofts-latest-vision-language-model"
+    arxiv: "https://arxiv.org/abs/2311.06242"
+
+  - title: "Export Validation Results in Pandas Dataframe, CSV, SQL and Other Formats.ipynb"
+    file: "notebooks/how-to-export-the-validation-results-into-dataframe-csv-sql-and-other-formats.ipynb"
+    youtube: "https://youtu.be/j8uQc0qB91s"
+    discussion: "https://github.com/orgs/ultralytics/discussions/8153"
+
+  - title: "HomeObjects-3K Dataset for Everyday Object Detection"
+    file: "notebooks/how-to-train-ultralytics-yolo-on-homeobjects-dataset.ipynb"
+    youtube: "https://youtu.be/v3iqOYoRBFQ"
+    discussion: "https://github.com/orgs/ultralytics/discussions/20805"
+    dataset: "https://docs.ultralytics.com/datasets/detect/homeobjects-3k/"
+
+  - title: "Generate Heatmaps using Ultralytics YOLO"
+    file: "notebooks/how-to-generate-heatmaps-using-ultralytics-yolo.ipynb"
+    youtube: "https://youtu.be/4ezde5-nZZw"
+    blog: "https://www.ultralytics.com/blog/ultralytics-yolo11-and-computer-vision-in-smart-supermarkets"
+    discussion: "https://github.com/orgs/ultralytics/discussions/10068"
+
+  - title: "Monitor Your Workouts using Ultralytics YOLO"
+    file: "notebooks/how-to-monitor-workouts-using-ultralytics-yolo.ipynb"
+    youtube: "https://youtu.be/LGGxqLZtvuw"
+    blog: "https://www.ultralytics.com/blog/smart-fitness-technology-enabled-by-ultralytics-yolo11"
+    discussion: "https://github.com/orgs/ultralytics/discussions/8820"
+
+  - title: "Package Segmentation using Ultralytics YOLO"
+    file: "notebooks/how-to-train-ultralytics-yolo-on-package-segmentation-dataset.ipynb"
+    youtube: "https://youtu.be/ZF7EAodHn1U"
+    blog: "https://www.ultralytics.com/blog/package-identification-and-segmentation-with-ultralytics-yolo11"
+    discussion: "https://github.com/orgs/ultralytics/discussions/18338"
+    dataset: "https://docs.ultralytics.com/datasets/segment/package-seg/"
+
+  - title: "Track Objects in a Zone using Ultralytics YOLO"
+    file: "notebooks/how-to-track-the-objects-in-zone-using-ultralytics-yolo.ipynb"
+    youtube: "https://youtu.be/SMSJvjUG1ko"
+    discussion: "https://github.com/orgs/ultralytics/discussions/17962"
+
+  - title: "Inference using SAM and SAM2 with Ultralytics"
+    file: "notebooks/inference-with-meta-sam-and-sam2-using-ultralytics-python-package.ipynb"
+    youtube: "https://youtu.be/yXQPLMrNX2s"
+    blog: "https://www.ultralytics.com/blog/applications-of-meta-ai-segment-anything-model-2-sam-2"
+    discussion: "https://github.com/orgs/ultralytics/discussions/14830"
+    arxiv: "https://arxiv.org/abs/2408.00714"
+
+  - title: "Crack Segmentation using Ultralytics YOLO"
+    file: "notebooks/how-to-train-ultralytics-yolo-on-crack-segmentation-dataset.ipynb"
+    youtube: "https://youtu.be/C4mc40YKm-g"
+    blog: "https://www.ultralytics.com/blog/using-ai-for-crack-detection-and-segmentation"
+    discussion: "https://github.com/orgs/ultralytics/discussions/9817"
+    dataset: "https://docs.ultralytics.com/datasets/segment/crack-seg/"
+
+  - title: "Queue Management using Ultralytics Solutions"
+    file: "notebooks/how-to-monitor-objects-in-queue-using-queue-management-solution.ipynb"
+    youtube: "https://youtu.be/gX5kSRD56Gs"
+    blog: "https://www.ultralytics.com/blog/a-look-at-real-time-queue-monitoring-enabled-by-computer-vision"
+    discussion: "https://github.com/orgs/ultralytics/discussions/11226"
