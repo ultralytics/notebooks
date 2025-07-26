@@ -101,7 +101,7 @@ notebooks:
     youtube: "https://youtu.be/yXQPLMrNX2s"
     blog: "https://www.ultralytics.com/blog/applications-of-meta-ai-segment-anything-model-2-sam-2"
     discussion: "https://github.com/orgs/ultralytics/discussions/14830"
-    arvix: "https://arxiv.org/abs/2408.00714"
+    arxiv: "https://arxiv.org/abs/2408.00714"
 
   - title: "Crack Segmentation using Ultralytics YOLO"
     file: "notebooks/how-to-train-ultralytics-yolo-on-crack-segmentation-dataset.ipynb"
