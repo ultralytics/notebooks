@@ -44,7 +44,7 @@ for nb in data["notebooks"]:
         else ""
     )
     dataset_badge = (
-        f"[![Explore Dataset](https://img.shields.io/badge/Dataset-%23ff1b6c?logo=ultralytics)]({nb['dataset']})"
+        f"[![Explore Dataset](https://github.com/user-attachments/assets/e9e2aec2-d8f7-492d-a65c-7ed09730a23d)]({nb['dataset']})"
         if nb.get("dataset")
         else ""
     )
