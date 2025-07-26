@@ -27,34 +27,34 @@ for nb in data["notebooks"]:
     kaggle_badge = (
         f"[![Open in Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)]({nb['kaggle']})"
         if nb.get("kaggle")
-        else ""
+        else None
     )
     youtube_badge = (
         f"[![Watch on YouTube](https://badges.aleen42.com/src/youtube.svg)]({nb['youtube']})"
         if nb.get("youtube")
-        else ""
+        else None
     )
     dataset_badge = (
         f"[![Explore Dataset](https://img.shields.io/badge/Dataset-%23ff1b6c?logo=ultralytics)]({nb['dataset']})"
         if nb.get("dataset")
-        else ""
+        else None
     )
     blog_badge = (
         f"[![Ultralytics Blog](https://github.com/user-attachments/assets/c60c360b-69de-4228-8545-f83096d5a9ce)]({nb['blog']})"
         if nb.get("blog")
-        else ""
+        else None
     )
     arxiv_badge = (
         f"[![Read arXiv paper](https://img.shields.io/badge/arXiv-{nb['arxiv'].split('/')[-1]}-b31b1b.svg)]({nb['arxiv']})"
         if nb.get("arxiv")
-        else ""
+        else None
     )
     discussion_badge = (
         f"[![Explore documentation](https://img.shields.io/badge/Documentation-111F68?logo=ultralytics)]({nb['discussion']})"
         if nb.get("discussion")
-        else ""
+        else None
     )
-    github_badge = f"[![GitHub](https://badges.aleen42.com/src/github.svg)]({nb['github']})" if nb.get("github") else ""
+    github_badge = f"[![GitHub](https://badges.aleen42.com/src/github.svg)]({nb['github']})" if nb.get("github") else None
 
     # Add row with proper centering
     table.append(
