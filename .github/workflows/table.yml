@@ -1,18 +1,17 @@
 # Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
 
-# Ultralytics Actions https://github.com/ultralytics/actions
 # This workflow updates the notebooks table in README.md.
 
 name: Update Notebooks Table
 
 permissions:
-  contents: write  # Add write permissions for updating the README.md table
+  contents: write  # Write permissions for updating the README.md table
 
 on:
   push:
     paths:
-      - 'docs/notebooks-data.yml'
-      - 'docs/update-readme-table.py'
+      - 'docs/notebooks-data.yml'  # Include data about notebook and resources
+      - 'docs/update-readme-table.py'  # Include script for updating the notebook table.
 
 jobs:
   update:
