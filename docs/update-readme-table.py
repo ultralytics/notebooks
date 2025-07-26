@@ -54,7 +54,9 @@ for nb in data["notebooks"]:
         if nb.get("discussion")
         else None
     )
-    github_badge = f"[![GitHub](https://badges.aleen42.com/src/github.svg)]({nb['github']})" if nb.get("github") else None
+    github_badge = (
+        f"[![GitHub](https://badges.aleen42.com/src/github.svg)]({nb['github']})" if nb.get("github") else None
+    )
 
     # Add row with proper centering
     table.append(
