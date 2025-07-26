@@ -25,8 +25,8 @@ table = [
 
 for nb in data["notebooks"]:
     # Title link
-    if nb.get("link"):
-        title_link = f'<a href="{nb["link"]}">{nb["title"]}</a>'
+    if nb.get("file"):
+        title_link = f'<a href="{nb["file"]}">{nb["title"]}</a>'
     else:
         github_url = f"https://github.com/ultralytics/notebooks/blob/main/{nb['file']}"
         title_link = f"[{nb['title']}]({github_url})"
