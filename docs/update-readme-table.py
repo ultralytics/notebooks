@@ -55,12 +55,12 @@ for notebook in data["notebooks"]:
         else ""
     )
     dataset_badge = (
-        f"[![Explore Dataset](https://img.shields.io/badge/Dataset-%23ff1b6c?logo=ultralytics)]({notebook['dataset']})"
+        f"[![Ultralytics Dataset](https://img.shields.io/badge/Dataset-%23ff1b6c?logo=ultralytics)]({notebook['dataset']})"
         if notebook.get("dataset")
         else ""
     )
     blog_badge = (
-        f"[![Ultralytics Blog](https://github.com/user-attachments/assets/c60c360b-69de-4228-8545-f83096d5a9ce)]({notebook['blog']})"
+        f"[![Ultralytics Blog](https://img.shields.io/badge/Blog-%23111F68?logo=ultralytics)]({notebook['blog']})"
         if notebook.get("blog")
         else ""
     )
