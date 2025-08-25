@@ -5,30 +5,30 @@
 name: Update Notebooks Table
 
 permissions:
-  contents: write  # Write permissions for updating the README.md table
+  contents: write # Write permissions for updating the README.md table
 
 on:
   push:
     paths:
-      - 'docs/notebooks-data.yml'  # Include data about notebook and resources
-      - 'docs/update-readme-table.py'  # Include script for updating the notebook table.
+      - "docs/notebooks-data.yml" # Include data about notebook and resources
+      - "docs/update-readme-table.py" # Include script for updating the notebook table.
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
-    - run: pip install pyyaml
-    - run: python docs/update-readme-table.py
-    - run: |
-        git config --global user.name "UltralyticsAssistant"
-        git config --global user.email "web@ultralytics.com"
-        git add README.md
-        git diff --staged --quiet || git commit -m "Update-table by  by https://ultralytics.com/actions"
-        git push || {
-          echo "Push rejected due to branch protection (GH013). Skipping push."
-          exit 0
-        }
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+      - run: pip install pyyaml
+      - run: python docs/update-readme-table.py
+      - run: |
+          git config --global user.name "UltralyticsAssistant"
+          git config --global user.email "web@ultralytics.com"
+          git add README.md
+          git diff --staged --quiet || git commit -m "Update-table by  by https://ultralytics.com/actions"
+          git push || {
+            echo "Push rejected due to branch protection (GH013). Skipping push."
+            exit 0
+          }
