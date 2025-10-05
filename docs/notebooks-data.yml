@@ -91,6 +91,7 @@ notebooks:
   - title: "Track Objects in a Zone using Ultralytics YOLO"
     file: "notebooks/how-to-track-the-objects-in-zone-using-ultralytics-yolo.ipynb"
     youtube: "https://youtu.be/SMSJvjUG1ko"
+    blog: "https://www.ultralytics.com/blog/region-based-object-counting-using-ultralytics-yolo11"
     documentation: "https://docs.ultralytics.com/guides/trackzone/"
 
   - title: "Inference using SAM and SAM2 with Ultralytics"
