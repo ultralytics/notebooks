@@ -115,6 +115,14 @@ notebooks:
 
   - title: "Construction-PPE Detection using Ultralytics YOLO"
     file: "notebooks/how-to-train-ultralytics-yolo-on-construction-ppe-detection-dataset.ipynb"
-    youtube: ""
+    youtube: "https://youtu.be/lFaVnrhMmaE"
     blog: "https://www.ultralytics.com/blog/ai-in-construction-saving-lives-cutting-costs-and-elevating-quality"
     documentation: "https://docs.ultralytics.com/datasets/detect/construction-ppe/"
+    dataset: "https://docs.ultralytics.com/datasets/detect/construction-ppe/"
+
+  - title: "Object Detection with KITTI using Ultralytics YOLO"
+    file: "notebooks/how-to-train-ultralytics-yolo-on-kitti-detection-dataset.ipynb"
+    youtube: ""
+    blog: ""
+    documentation: "https://docs.ultralytics.com/datasets/detect/kitti/"
+    dataset: "https://docs.ultralytics.com/datasets/detect/kitti/"
