@@ -42,6 +42,7 @@ notebooks:
   - title: "Google Gemini Model for Object Detection, Image Captioning and OCR with Ultralytics Utilities"
     file: "notebooks/how-to-use-google-gemini-models-for-object-detection-image-captioning-and-ocr.ipynb"
     youtube: "https://youtu.be/ottsAmFdbmU"
+    blog: "https://www.ultralytics.com/blog/get-hands-on-with-google-gemini-2-5-for-computer-vision-tasks"
     documentation: "https://developers.googleblog.com/en/gemini-25-flash-lite-is-now-stable-and-generally-available/"
     github: "https://github.com/google-gemini/gemini-cli"
     arxiv: "https://arxiv.org/abs/2507.06261"
