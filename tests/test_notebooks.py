@@ -30,6 +30,16 @@ def _first_frame(video_path: Path):
     return frame
 
 
+@pytest.fixture(scope="session")
+def notebook_assets(tmp_path_factory):
+    """Download shared notebook assets once per test session."""
+    assets_dir = tmp_path_factory.mktemp("notebook-assets")
+    return {
+        "demo_video": _download_asset(DEMO_VIDEO, assets_dir),
+        "workout_video": _download_asset(WORKOUT_VIDEO, assets_dir),
+    }
+
+
 @pytest.mark.parametrize(
     ("solution_class", "solution_kwargs", "video_url"),
     [
@@ -47,9 +57,10 @@ def _first_frame(video_path: Path):
         (AIGym, {"model": "yolo26n-pose.pt", "kpts": [12, 14, 16]}, WORKOUT_VIDEO),
     ],
 )
-def test_solution_inference(tmp_path, solution_class, solution_kwargs, video_url):
+def test_solution_inference(notebook_assets, solution_class, solution_kwargs, video_url):
     """Smoke-test notebook solution flows using the current YOLO26 models."""
-    frame = _first_frame(_download_asset(video_url, tmp_path))
+    video_path = notebook_assets["workout_video"] if video_url == WORKOUT_VIDEO else notebook_assets["demo_video"]
+    frame = _first_frame(video_path)
     result = solution_class(**solution_kwargs)(frame)
     assert result is not None
 

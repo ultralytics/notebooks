@@ -1,0 +1,56 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
+name: Notebook Smoke Tests
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 8 * * *"  # Daily at 08:00 UTC
+
+jobs:
+  notebook-smoke:
+    name: Notebook Smoke Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v7
+        with:
+          python-version: "3.14"
+          activate-environment: true
+
+      - name: Install dependencies
+        run: uv pip install ultralytics pytest "shapely>=2.0.0"
+
+      - name: Run fast notebook smoke tests
+        run: pytest -m "not slow" tests/test_notebooks.py --maxfail=1 -p no:warnings
+
+  notebook-sam:
+    name: Notebook SAM Coverage
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v7
+        with:
+          python-version: "3.14"
+          activate-environment: true
+
+      - name: Install dependencies
+        run: uv pip install ultralytics pytest "shapely>=2.0.0"
+
+      - name: Run scheduled SAM notebook tests
+        run: pytest -m "slow" tests/test_notebooks.py --maxfail=1 -p no:warnings
