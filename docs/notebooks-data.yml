@@ -1,7 +1,7 @@
 # Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
 
 # This file contains all information about the notebooks, including their titles, links,
-# and other relevant resources i.e. blog, dataset etc. Any modifications made here are
+# and other relevant resources, i.e., blog, dataset, YouTube, documentation, GitHub, etc. Any modifications made here are
 # automatically rendered to the README.md file, ensuring that the table remains up to date.
 
 notebooks:
@@ -42,6 +42,7 @@ notebooks:
   - title: "Google Gemini Model for Object Detection, Image Captioning and OCR with Ultralytics Utilities"
     file: "notebooks/how-to-use-google-gemini-models-for-object-detection-image-captioning-and-ocr.ipynb"
     youtube: "https://youtu.be/ottsAmFdbmU"
+    blog: "https://www.ultralytics.com/blog/get-hands-on-with-google-gemini-2-5-for-computer-vision-tasks"
     documentation: "https://developers.googleblog.com/en/gemini-25-flash-lite-is-now-stable-and-generally-available/"
     github: "https://github.com/google-gemini/gemini-cli"
     arxiv: "https://arxiv.org/abs/2507.06261"
@@ -112,3 +113,17 @@ notebooks:
     youtube: "https://youtu.be/gX5kSRD56Gs"
     blog: "https://www.ultralytics.com/blog/a-look-at-real-time-queue-monitoring-enabled-by-computer-vision"
     documentation: "https://docs.ultralytics.com/guides/queue-management/"
+
+  - title: "Construction-PPE Detection using Ultralytics YOLO"
+    file: "notebooks/how-to-train-ultralytics-yolo-on-construction-ppe-detection-dataset.ipynb"
+    youtube: "https://youtu.be/lFaVnrhMmaE"
+    blog: "https://www.ultralytics.com/blog/ai-in-construction-saving-lives-cutting-costs-and-elevating-quality"
+    documentation: "https://docs.ultralytics.com/datasets/detect/construction-ppe/"
+    dataset: "https://docs.ultralytics.com/datasets/detect/construction-ppe/"
+
+  - title: "Object Detection with KITTI using Ultralytics YOLO"
+    file: "notebooks/how-to-train-ultralytics-yolo-on-kitti-detection-dataset.ipynb"
+    youtube: "https://youtu.be/NNeDlTbq9pA"
+    blog: ""
+    documentation: "https://docs.ultralytics.com/datasets/detect/kitti/"
+    dataset: "https://docs.ultralytics.com/datasets/detect/kitti/"
