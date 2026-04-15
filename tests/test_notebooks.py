@@ -36,7 +36,7 @@ def test_solution_inference(solution_class, solution_kwargs, video_source):
 
 
 def test_export_val_results():
-    """Test: notebooks/how-to-export-the-validation-results-into-dataframe-csv-sql-and-other-formats.ipynb"""
+    """Test: notebooks/how-to-export-the-validation-results-into-dataframe-csv-sql-and-other-formats.ipynb."""
     model = YOLO("yolo11n.pt")
     metrics = model.val(data="coco8.yaml", verbose=True)
     metrics.to_df()
@@ -57,7 +57,7 @@ def test_export_val_results():
 
 @pytest.mark.slow
 def test_sam_inference():
-    """Test: notebooks/inference-with-meta-sam-and-sam2-using-ultralytics-python-package.ipynb"""
+    """Test: notebooks/inference-with-meta-sam-and-sam2-using-ultralytics-python-package.ipynb."""
     from ultralytics.data.annotator import auto_annotate
 
     model = SAM("sam2.1_b.pt")
