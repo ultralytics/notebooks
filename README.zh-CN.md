@@ -27,7 +27,7 @@
 
 欢迎使用 Ultralytics Notebooks！本仓库提供可直接使用的 [Google Colab](https://colab.research.google.com/) 笔记本，帮助你更高效地测试和运行基于 [Ultralytics YOLO](https://docs.ultralytics.com/) 的[计算机视觉](https://www.ultralytics.com/glossary/computer-vision-cv)项目。你可以通过这些资源快速完成环境配置、模型运行以及训练、验证、推理和导出等常见流程，并结合 [Ultralytics Platform](https://platform.ultralytics.com/ultralytics/yolo26) 等工具进行实验。
 
-下方的 notebook 目录由 [docs/notebooks-data.yml](docs/notebooks-data.yml) 自动生成，因此 README 会与发布到 Colab、Kaggle 和 SageMaker Studio Lab 的链接保持同步。
+下方的 notebook 目录当前是从主 [README.md](README.md) 手动同步而来，以便与发布到 Colab、Kaggle 和 SageMaker Studio Lab 的链接保持一致。
 
 为保持与文件名、Colab 链接以及公开 notebook 标题一一对应，下面目录中的 notebook 标题保留其规范英文名称。
 
