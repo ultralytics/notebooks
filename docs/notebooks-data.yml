@@ -94,7 +94,7 @@ notebooks:
     youtube: "https://youtu.be/SMSJvjUG1ko"
     documentation: "https://docs.ultralytics.com/guides/trackzone/"
 
-  - title: "Inference using SAM and SAM2 with Ultralytics"
+  - title: "Inference using SAM, SAM2 and SAM3 with Ultralytics"
     file: "notebooks/inference-with-meta-sam-and-sam2-using-ultralytics-python-package.ipynb"
     youtube: "https://youtu.be/yXQPLMrNX2s"
     blog: "https://www.ultralytics.com/blog/applications-of-meta-ai-segment-anything-model-2-sam-2"
