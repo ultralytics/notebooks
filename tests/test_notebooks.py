@@ -6,7 +6,6 @@ from pathlib import Path
 
 import cv2
 import pytest
-
 from ultralytics import ASSETS, SAM, YOLO
 from ultralytics.data.annotator import auto_annotate
 from ultralytics.solutions import AIGym, Heatmap, ObjectCounter, TrackZone
