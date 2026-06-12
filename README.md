@@ -4,7 +4,7 @@
       <img width="100%" src="https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/banner-yolov8.png" alt="Ultralytics YOLO banner"></a>	
   </p>
 
-[中文](https://docs.ultralytics.com/zh/) | [한국어](https://docs.ultralytics.com/ko/) | [日本語](https://docs.ultralytics.com/ja/) | [Русский](https://docs.ultralytics.com/ru/) | [Deutsch](https://docs.ultralytics.com/de/) | [Français](https://docs.ultralytics.com/fr/) | [Español](https://docs.ultralytics.com/es) | [Português](https://docs.ultralytics.com/pt/) | [Türkçe](https://docs.ultralytics.com/tr/) | [Tiếng Việt](https://docs.ultralytics.com/vi/) | [العربية](https://docs.ultralytics.com/ar/) <br>
+[中文](https://docs.ultralytics.com/zh) | [한국어](https://docs.ultralytics.com/ko) | [日本語](https://docs.ultralytics.com/ja) | [Русский](https://docs.ultralytics.com/ru) | [Deutsch](https://docs.ultralytics.com/de) | [Français](https://docs.ultralytics.com/fr) | [Español](https://docs.ultralytics.com/es) | [Português](https://docs.ultralytics.com/pt) | [Türkçe](https://docs.ultralytics.com/tr) | [Tiếng Việt](https://docs.ultralytics.com/vi) | [العربية](https://docs.ultralytics.com/ar) <br>
 
 <div align="center">
   <a href="https://github.com/ultralytics"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-github.png" width="2%" alt="Ultralytics GitHub"></a>
@@ -27,7 +27,7 @@
 
 Welcome to Ultralytics Notebooks! This repository provides ready-to-use [Google Colab](https://colab.research.google.com/) notebooks that streamline the testing and execution of [computer vision](https://www.ultralytics.com/glossary/computer-vision-cv) projects using [Ultralytics YOLO](https://docs.ultralytics.com/) models. These resources make it easy to set up environments, run models quickly, and experiment with various features offered by the Ultralytics ecosystem, including training, validation, inference, and export, often integrated with tools like [Ultralytics Platform](https://platform.ultralytics.com/ultralytics/yolo26).
 
-Explore YOLO tasks including [Detect](https://docs.ultralytics.com/tasks/detect/), [Segment](https://docs.ultralytics.com/tasks/segment/), [Semantic](https://docs.ultralytics.com/tasks/semantic/), [Classify](https://docs.ultralytics.com/tasks/classify/), [Pose](https://docs.ultralytics.com/tasks/pose/), and [OBB](https://docs.ultralytics.com/tasks/obb/) in the Ultralytics Docs.
+Explore YOLO tasks including [Detect](https://docs.ultralytics.com/tasks/detect), [Segment](https://docs.ultralytics.com/tasks/segment), [Semantic](https://docs.ultralytics.com/tasks/semantic), [Classify](https://docs.ultralytics.com/tasks/classify), [Pose](https://docs.ultralytics.com/tasks/pose), and [OBB](https://docs.ultralytics.com/tasks/obb) in the Ultralytics Docs.
 
 The notebook catalog below is generated from [docs/notebooks-data.yml](docs/notebooks-data.yml), so the README stays aligned with the published Colab, Kaggle, and SageMaker links across Colab, Kaggle, and SageMaker Studio Lab.
 
@@ -60,7 +60,7 @@ The notebook catalog below is generated from [docs/notebooks-data.yml](docs/note
 
 ## 💡 Contribute
 
-Ultralytics thrives on community collaboration, and we deeply value your involvement in our [open-source](https://github.com/ultralytics) projects! We encourage you to explore our [Contributing Guide](https://docs.ultralytics.com/help/contributing/) for detailed insights on how you can participate. Please share your feedback with us by contributing to our [Survey](https://www.ultralytics.com/survey?utm_source=github&utm_medium=social&utm_campaign=Survey). A heartfelt thank you 🙏 goes out to everyone who has already contributed!
+Ultralytics thrives on community collaboration, and we deeply value your involvement in our [open-source](https://github.com/ultralytics) projects! We encourage you to explore our [Contributing Guide](https://docs.ultralytics.com/help/contributing) for detailed insights on how you can participate. Please share your feedback with us by contributing to our [Survey](https://www.ultralytics.com/survey?utm_source=github&utm_medium=social&utm_campaign=Survey). A heartfelt thank you 🙏 goes out to everyone who has already contributed!
 
 [![Ultralytics open-source contributors](https://raw.githubusercontent.com/ultralytics/assets/main/im/image-contributors.png)](https://github.com/ultralytics/ultralytics/graphs/contributors)
 

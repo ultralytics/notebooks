@@ -4,7 +4,7 @@
       <img width="100%" src="https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/banner-yolov8.png" alt="Ultralytics YOLO banner"></a>	
   </p>
 
-[中文](https://docs.ultralytics.com/zh/) | [한국어](https://docs.ultralytics.com/ko/) | [日本語](https://docs.ultralytics.com/ja/) | [Русский](https://docs.ultralytics.com/ru/) | [Deutsch](https://docs.ultralytics.com/de/) | [Français](https://docs.ultralytics.com/fr/) | [Español](https://docs.ultralytics.com/es) | [Português](https://docs.ultralytics.com/pt/) | [Türkçe](https://docs.ultralytics.com/tr/) | [Tiếng Việt](https://docs.ultralytics.com/vi/) | [العربية](https://docs.ultralytics.com/ar/) <br>
+[中文](https://docs.ultralytics.com/zh) | [한국어](https://docs.ultralytics.com/ko) | [日本語](https://docs.ultralytics.com/ja) | [Русский](https://docs.ultralytics.com/ru) | [Deutsch](https://docs.ultralytics.com/de) | [Français](https://docs.ultralytics.com/fr) | [Español](https://docs.ultralytics.com/es) | [Português](https://docs.ultralytics.com/pt) | [Türkçe](https://docs.ultralytics.com/tr) | [Tiếng Việt](https://docs.ultralytics.com/vi) | [العربية](https://docs.ultralytics.com/ar) <br>
 
 <div align="center">
   <a href="https://github.com/ultralytics"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-github.png" width="2%" alt="Ultralytics GitHub"></a>
@@ -27,7 +27,7 @@
 
 欢迎使用 Ultralytics Notebooks！本仓库提供可直接使用的 [Google Colab](https://colab.research.google.com/) 笔记本，帮助你更高效地测试和运行基于 [Ultralytics YOLO](https://docs.ultralytics.com/) 的[计算机视觉](https://www.ultralytics.com/glossary/computer-vision-cv)项目。你可以通过这些资源快速完成环境配置、模型运行以及训练、验证、推理和导出等常见流程，并结合 [Ultralytics Platform](https://platform.ultralytics.com/ultralytics/yolo26) 等工具进行实验。
 
-你可以在 Ultralytics Docs 中了解 YOLO 任务，包括 [Detect](https://docs.ultralytics.com/tasks/detect/)、[Segment](https://docs.ultralytics.com/tasks/segment/)、[Semantic](https://docs.ultralytics.com/tasks/semantic/)、[Classify](https://docs.ultralytics.com/tasks/classify/)、[Pose](https://docs.ultralytics.com/tasks/pose/) 和 [OBB](https://docs.ultralytics.com/tasks/obb/)。
+你可以在 Ultralytics Docs 中了解 YOLO 任务，包括 [Detect](https://docs.ultralytics.com/tasks/detect)、[Segment](https://docs.ultralytics.com/tasks/segment)、[Semantic](https://docs.ultralytics.com/tasks/semantic)、[Classify](https://docs.ultralytics.com/tasks/classify)、[Pose](https://docs.ultralytics.com/tasks/pose) 和 [OBB](https://docs.ultralytics.com/tasks/obb)。
 
 下方的 notebook 目录当前是从主 [README.md](README.md) 手动同步而来，以便与发布到 Colab、Kaggle 和 SageMaker Studio Lab 的链接保持一致。
 
@@ -62,7 +62,7 @@
 
 ## 💡 参与贡献
 
-Ultralytics 非常重视社区协作，也十分感谢你对我们[开源项目](https://github.com/ultralytics)的参与。欢迎查看我们的[贡献指南](https://docs.ultralytics.com/help/contributing/)以了解如何参与，也欢迎通过[问卷](https://www.ultralytics.com/survey?utm_source=github&utm_medium=social&utm_campaign=Survey)分享你的反馈。向所有已经做出贡献的开发者致以诚挚感谢！🙏
+Ultralytics 非常重视社区协作，也十分感谢你对我们[开源项目](https://github.com/ultralytics)的参与。欢迎查看我们的[贡献指南](https://docs.ultralytics.com/help/contributing)以了解如何参与，也欢迎通过[问卷](https://www.ultralytics.com/survey?utm_source=github&utm_medium=social&utm_campaign=Survey)分享你的反馈。向所有已经做出贡献的开发者致以诚挚感谢！🙏
 
 [![Ultralytics open-source contributors](https://raw.githubusercontent.com/ultralytics/assets/main/im/image-contributors.png)](https://github.com/ultralytics/ultralytics/graphs/contributors)
 
