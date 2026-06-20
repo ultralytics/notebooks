@@ -5,6 +5,11 @@
 # automatically rendered to the README.md file, ensuring that the table remains up to date.
 
 notebooks:
+  - title: "Autonomous Vehicle Object Detection with Ultralytics YOLO26"
+    file: "notebooks/how-to-detect-objects-for-autonomous-vehicles-using-yolo26.ipynb"
+    documentation: "https://docs.ultralytics.com/models/yolo26/"
+    github: "https://github.com/ultralytics/ultralytics"
+
   - title: "Car Parts Segmentation using Ultralytics YOLO"
     file: "notebooks/how-to-train-ultralytics-yolo-on-carparts-segmentation-dataset.ipynb"
     youtube: "https://youtu.be/HATMPgLYAPU"
