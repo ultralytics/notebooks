@@ -33,7 +33,7 @@ After opening a PR:
 ## Commands
 
 ```bash
-uv pip install ultralytics pytest "shapely>=2.0.0"                      # install (as CI does; never bare pip install)
+uv venv && uv pip install ultralytics pytest "shapely>=2.0.0"           # install (as CI does; never bare pip install)
 pytest -m "not slow" tests/test_notebooks.py --maxfail=1 -p no:warnings # fast smoke tests (CI PR job)
 pytest -m "slow" tests/test_notebooks.py --maxfail=1 -p no:warnings     # SAM tests (scheduled CI only)
 pytest tests/test_notebooks.py::test_export_val_results                 # run one test
