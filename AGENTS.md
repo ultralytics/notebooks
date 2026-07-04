@@ -40,7 +40,7 @@ pytest tests/test_notebooks.py::test_export_val_results                 # run on
 python docs/update-readme-table.py                                      # regenerate README.md table (needs pyyaml, run from repo root)
 ```
 
-- CI (`.github/workflows/ci.yml`) runs a single Ubuntu job on Python 3.14 via `astral-sh/setup-uv` — no version matrix, no coverage tooling.
+- CI (`.github/workflows/ci.yml`) runs on `ubuntu-latest` with Python 3.14 via `astral-sh/setup-uv` — a single Python version, no matrix, no coverage tooling; PRs run only the fast `notebook-smoke` job.
 - There is no local lint config (no pyproject/ruff/prettier files); formatting is applied in PRs by the Ultralytics Actions bot (`.github/workflows/format.yml`: Ruff, docformatter, Prettier, codespell).
 
 ## Architecture
@@ -55,7 +55,7 @@ This is a content repository of 19 tutorial Jupyter notebooks (`notebooks/`) for
 
 ## Conventions
 
-- Every source file starts with the `# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license` header — Ultralytics Actions adds these automatically; don't add or revert them manually.
+- Python and YAML files start with the `# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license` header — Ultralytics Actions adds these automatically; don't add or revert them manually.
 - All tests hit the live network: they download model weights, demo videos from GitHub releases, `ultralytics.com` assets, and the `coco8` dataset; downloaded `*.pt` weights land in the repo root and are gitignored.
 - `pytest.ini` defines the only custom marker, `slow`, reserved for heavyweight tests that run on scheduled CI only.
 - There is no version-bump or release process; changes ship by merging to `main`.
