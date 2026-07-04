@@ -37,7 +37,7 @@ uv venv && uv pip install ultralytics pytest "shapely>=2.0.0"           # instal
 pytest -m "not slow" tests/test_notebooks.py --maxfail=1 -p no:warnings # fast smoke tests (CI PR job)
 pytest -m "slow" tests/test_notebooks.py --maxfail=1 -p no:warnings     # SAM tests (scheduled CI only)
 pytest tests/test_notebooks.py::test_export_val_results                 # run one test
-python docs/update-readme-table.py                                      # regenerate README.md table (needs pyyaml, run from repo root)
+python3 docs/update-readme-table.py                                     # regenerate README.md table (needs pyyaml, run from repo root)
 ```
 
 - CI (`.github/workflows/ci.yml`) runs on `ubuntu-latest` with Python 3.14 via `astral-sh/setup-uv` — a single Python version, no matrix, no coverage tooling; PRs run only the fast `notebook-smoke` job.
@@ -45,7 +45,7 @@ python docs/update-readme-table.py                                      # regene
 
 ## Architecture
 
-This is a content repository of 19 tutorial Jupyter notebooks (`notebooks/`) for Ultralytics YOLO — there is no Python package, no build, and no release/publish process (the repo's only GitHub release, v0.0.0, just hosts a demo video used by tests).
+This is a content repository of 19 tutorial Jupyter notebooks (`notebooks/`) for Ultralytics YOLO — there is no Python package, no build, and no release/publish process (the repo's only GitHub release, v0.0.0, exists solely to host demo videos and images, including the demo video used by tests).
 
 - The notebook table in `README.md` (between `TABLE_START`/`TABLE_END` markers) is generated from `docs/notebooks-data.yml` by `docs/update-readme-table.py`; never edit the table by hand — edit the YAML and regenerate.
 - `.github/workflows/table.yml` triggers on any push touching that YAML or script (no branch filter) and commits the regenerated `README.md` to the pushed branch as `UltralyticsAssistant`.
