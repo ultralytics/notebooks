@@ -59,7 +59,7 @@ notebooks:
     blog: "https://www.ultralytics.com/blog/florence-2-microsofts-latest-vision-language-model"
     arxiv: "https://arxiv.org/abs/2311.06242"
 
-  - title: "Export Validation Results in Pandas Dataframe, CSV, SQL and Other Formats.ipynb"
+  - title: "Export Validation Results in Pandas Dataframe, CSV, SQL and Other Formats"
     file: "notebooks/how-to-export-the-validation-results-into-dataframe-csv-sql-and-other-formats.ipynb"
     youtube: "https://youtu.be/j8uQc0qB91s"
     documentation: "https://github.com/orgs/ultralytics/discussions/8153"
