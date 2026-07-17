@@ -23,7 +23,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v7
 
-      - uses: astral-sh/setup-uv@v7
+      - uses: ultralytics/actions/setup-uv@main
         with:
           python-version: "3.14"
           activate-environment: true
@@ -44,7 +44,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v7
 
-      - uses: astral-sh/setup-uv@v7
+      - uses: ultralytics/actions/setup-uv@main
         with:
           python-version: "3.14"
           activate-environment: true
