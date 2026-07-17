@@ -40,7 +40,7 @@ pytest tests/test_notebooks.py::test_export_val_results                 # run on
 python3 docs/update-readme-table.py                                     # regenerate README.md table (needs pyyaml, run from repo root)
 ```
 
-- CI (`.github/workflows/ci.yml`) runs on `ubuntu-latest` with Python 3.14 via `astral-sh/setup-uv` — a single Python version, no matrix, no coverage tooling; PRs run only the fast `notebook-smoke` job.
+- CI (`.github/workflows/ci.yml`) runs on `ubuntu-latest` with Python 3.14 via `ultralytics/actions/setup-uv@main` — a single Python version, no matrix, no coverage tooling; PRs run only the fast `notebook-smoke` job.
 - There is no local lint config (no pyproject/ruff/prettier files); formatting is applied in PRs by the Ultralytics Actions bot (`.github/workflows/format.yml`: Ruff, docformatter, Prettier, codespell).
 
 ## Architecture
