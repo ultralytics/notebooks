@@ -11,7 +11,7 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    - cron: "0 8 * * *"  # Daily at 08:00 UTC
+    - cron: "0 8 * * *" # Daily at 08:00 UTC
 
 jobs:
   notebook-smoke:
