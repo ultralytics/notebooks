@@ -89,18 +89,20 @@ for notebook in data["notebooks"]:
     )
 
 table_md = "\n".join(table)
-with open("README.md") as f:  # Update README
-    readme = f.read()
+start_marker = "<!-- TABLE_START -->"
+end_marker = "<!-- TABLE_END -->"
 
-start = readme.find("<!-- TABLE_START -->")
-end = readme.find("<!-- TABLE_END -->")
+for readme_path in ("README.md", "README.zh-CN.md"):
+    with open(readme_path) as f:
+        readme = f.read()
 
-if start != -1 and end != -1:
-    new_readme = readme[: start + 20] + "\n\n" + table_md + "\n\n" + readme[end:]
+    start = readme.find(start_marker)
+    end = readme.find(end_marker)
+    if start == -1 or end == -1:
+        raise ValueError(f"Add {start_marker} and {end_marker} markers to {readme_path}.")
 
-    with open("README.md", "w") as f:
+    new_readme = readme[: start + len(start_marker)] + "\n\n" + table_md + "\n\n" + readme[end:]
+    with open(readme_path, "w") as f:
         f.write(new_readme)
 
-    print(f"✅ Updated table with {len(data['notebooks'])} notebooks.")
-else:
-    print("❌ Add <!-- TABLE_START --> and <!-- TABLE_END --> markers to README.md.")
+print(f"✅ Updated tables with {len(data['notebooks'])} notebooks.")
