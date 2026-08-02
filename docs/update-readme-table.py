@@ -1,6 +1,6 @@
 # Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
 
-# This file updates the notebooks table within the README.md file. It ensures that any
+# This file updates the notebooks table within the README files. It ensures that any
 # newly added or modified notebooks are automatically reflected in the documentation.
 
 import yaml
@@ -25,11 +25,7 @@ table = [
 
 for notebook in data["notebooks"]:
     # Title link
-    if notebook.get("file"):
-        title_link = f'<a href="{notebook["file"]}">{notebook["title"]}</a>'
-    else:
-        github_url = f"https://github.com/ultralytics/notebooks/blob/main/{notebook['file']}"
-        title_link = f"[{notebook['title']}]({github_url})"
+    title_link = f'<a href="{notebook["file"]}">{notebook["title"]}</a>'
 
     # Generate all badges
     colab_url = f"https://colab.research.google.com/github/ultralytics/notebooks/blob/main/{notebook['file']}"
@@ -45,8 +41,6 @@ for notebook in data["notebooks"]:
     )
     amazon_sagemaker_badge = (
         f"[![Open in SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)]({amazon_sagemaker_url})"
-        if notebook.get("file")
-        else ""
     )
 
     youtube_badge = (
