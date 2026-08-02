@@ -27,7 +27,7 @@
 
 Welcome to Ultralytics Notebooks! This repository provides ready-to-use [Google Colab](https://colab.research.google.com/) notebooks that streamline the testing and execution of [computer vision](https://www.ultralytics.com/glossary/computer-vision-cv) projects using [Ultralytics YOLO](https://docs.ultralytics.com/) models. These resources make it easy to set up environments, run models quickly, and experiment with various features offered by the Ultralytics ecosystem, including training, validation, inference, and export, often integrated with tools like [Ultralytics Platform](https://platform.ultralytics.com/ultralytics/yolo26).
 
-Explore YOLO tasks including [Detect](https://docs.ultralytics.com/tasks/detect), [Segment](https://docs.ultralytics.com/tasks/segment), [Semantic](https://docs.ultralytics.com/tasks/semantic), [Classify](https://docs.ultralytics.com/tasks/classify), [Pose](https://docs.ultralytics.com/tasks/pose), and [OBB](https://docs.ultralytics.com/tasks/obb) in the Ultralytics Docs.
+Explore YOLO tasks including [Detect](https://docs.ultralytics.com/tasks/detect), [Segment](https://docs.ultralytics.com/tasks/segment), [Semantic](https://docs.ultralytics.com/tasks/semantic), [Depth](https://docs.ultralytics.com/tasks/depth), [Classify](https://docs.ultralytics.com/tasks/classify), [Pose](https://docs.ultralytics.com/tasks/pose), and [OBB](https://docs.ultralytics.com/tasks/obb) in the Ultralytics Docs.
 
 The notebook catalog below is generated from [docs/notebooks-data.yml](docs/notebooks-data.yml), so the README stays aligned with the published Colab, Kaggle, and SageMaker Studio Lab links.
 
@@ -68,7 +68,7 @@ Ultralytics thrives on community collaboration, and we deeply value your involve
 
 Ultralytics offers two distinct licensing options to accommodate various use cases:
 
-- **AGPL-3.0 License**: This official [OSI-approved](https://opensource.org/license/agpl-3.0) open-source license is ideal for students, enthusiasts, and researchers who value open collaboration and knowledge sharing. See the [LICENSE](https://github.com/ultralytics/ultralytics/blob/main/LICENSE) file for details.
+- **AGPL-3.0 License**: This official [OSI-approved](https://opensource.org/license/agpl-3.0) open-source license is ideal for students, enthusiasts, and researchers who value open collaboration and knowledge sharing. See the [LICENSE](https://github.com/ultralytics/notebooks/blob/main/LICENSE) file for details.
 - **Enterprise License**: Designed for commercial use, this license permits the seamless integration of Ultralytics software and AI models into commercial products and services, bypassing the open-source requirements of AGPL-3.0. If your scenario involves commercial deployment, please contact us through [Ultralytics Licensing](https://www.ultralytics.com/license).
 
 ## 📮 Contact

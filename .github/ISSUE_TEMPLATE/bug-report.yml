@@ -47,13 +47,13 @@ body:
   - type: textarea
     attributes:
       label: Environment
-      description: Share the platform and version information relevant to your report.
+      description: Share the notebook and runtime information relevant to your report.
       placeholder: |
         Please include:
-        - OS (e.g., Ubuntu 20.04, macOS 13.5, Windows 11)
-        - Language or framework version (Python, Swift, Flutter, etc.)
-        - Package or app version
-        - Hardware (e.g., CPU, GPU model, device model)
+        - Notebook name (e.g., how-to-use-ultralytics-yolo-with-sahi.ipynb)
+        - Runtime (e.g., Colab, Kaggle, SageMaker Studio Lab, local Jupyter)
+        - Python and `ultralytics` versions
+        - Accelerator (e.g., CPU, T4 GPU, TPU)
         - Any other environment details
     validations:
       required: true
