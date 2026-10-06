@@ -23,7 +23,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v7
 
-      - uses: ultralytics/actions/setup-uv@setup-uv-defaults
+      - uses: ultralytics/actions/setup-uv@main
         with:
           python-version: "3.14"
 
@@ -43,7 +43,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v7
 
-      - uses: ultralytics/actions/setup-uv@setup-uv-defaults
+      - uses: ultralytics/actions/setup-uv@main
         with:
           python-version: "3.14"
 
