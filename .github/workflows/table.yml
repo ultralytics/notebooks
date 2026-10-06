@@ -18,10 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-python@v7
-        with:
-          python-version: "3.x"
-      - run: pip install pyyaml
+      - uses: ultralytics/actions/setup-uv@main
+      - run: uv pip install pyyaml
       - run: python docs/update-readme-table.py
       - run: |
           git config --global user.name "UltralyticsAssistant"

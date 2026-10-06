@@ -26,7 +26,6 @@ jobs:
       - uses: ultralytics/actions/setup-uv@main
         with:
           python-version: "3.14"
-          activate-environment: true
 
       - name: Install dependencies
         run: uv pip install ultralytics pytest "shapely>=2.0.0"
@@ -47,7 +46,6 @@ jobs:
       - uses: ultralytics/actions/setup-uv@main
         with:
           python-version: "3.14"
-          activate-environment: true
 
       - name: Install dependencies
         run: uv pip install ultralytics pytest "shapely>=2.0.0"
