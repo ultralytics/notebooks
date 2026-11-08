@@ -13,12 +13,10 @@ notebooks:
     github: "https://github.com/ultralytics/ultralytics"
     dataset: "https://docs.ultralytics.com/datasets/segment/carparts-seg"
 
-  - title: "Ultralytics YOLO with SAHI Tiled Inference"
-    file: "notebooks/how-to-use-ultralytics-yolo-with-sahi.ipynb"
-    youtube: "https://youtu.be/tq3FU_QczxE"
-    documentation: "https://docs.ultralytics.com/datasets/detect/brain-tumor"
-    github: "https://github.com/obss/sahi"
-    dataset: "https://docs.ultralytics.com/datasets/detect/brain-tumor"
+  - title: "High Resolution Tiling using Ultralytics YOLO"
+    file: "notebooks/how-to-use-ultralytics-yolo-high-resolution-tiling.ipynb"
+    documentation: "https://docs.ultralytics.com/guides/high-resolution-tiling"
+    github: "https://github.com/ultralytics/ultralytics"
 
   - title: "Medical Pills Detection using Ultralytics YOLO"
     file: "notebooks/how-to-train-ultralytics-yolo-on-medical-pills-dataset.ipynb"

@@ -50,7 +50,7 @@ body:
       description: Share the notebook and runtime information relevant to your report.
       placeholder: |
         Please include:
-        - Notebook name (e.g., how-to-use-ultralytics-yolo-with-sahi.ipynb)
+        - Notebook name (e.g., how-to-use-ultralytics-yolo-high-resolution-tiling.ipynb)
         - Runtime (e.g., Colab, Kaggle, SageMaker Studio Lab, local Jupyter)
         - Python and `ultralytics` versions
         - Accelerator (e.g., CPU, T4 GPU, TPU)
