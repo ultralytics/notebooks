@@ -45,11 +45,9 @@ notebooks:
     github: "https://github.com/google-gemini/gemini-cli"
     arxiv: "https://arxiv.org/abs/2507.06261"
 
-  - title: "Automatic Number Plate Recognition with Ultralytics YOLO and OpenAI GPT-4o"
-    file: "notebooks/how-to-use-ultralytics-yolo-with-openai-for-number-plate-recognition.ipynb"
-    youtube: "https://youtu.be/HS3Ta7c0zuI"
-    blog: "https://www.ultralytics.com/blog/build-an-anpr-system-with-ultralytics-yolo11-and-gpt-4o-mini"
-    documentation: "https://openai.com/news/"
+  - title: "Automatic Number Plate Recognition with Ultralytics YOLO and OCR"
+    file: "notebooks/how-to-use-ultralytics-yolo-ocr-for-number-plate-recognition.ipynb"
+    documentation: "https://docs.ultralytics.com/guides/ocr"
 
   - title: "Microsoft Florence-2 for Object Detection, Image Captioning, OCR and Segmentation with Ultralytics Package"
     file: "notebooks/how-to-use-florence-2-for-object-detection-image-captioning-ocr-and-segmentation.ipynb"
